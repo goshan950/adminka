@@ -1,0 +1,11 @@
+.basic {
+  display: flex;
+}
+
+.app-wrapper {
+}
+
+.content {
+  background-color: whitesmoke;
+  width: 100vw;
+}

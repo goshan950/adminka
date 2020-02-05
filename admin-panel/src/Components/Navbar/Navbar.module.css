@@ -1,0 +1,10 @@
+.nav {
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.item {
+    margin: 20px;
+}
