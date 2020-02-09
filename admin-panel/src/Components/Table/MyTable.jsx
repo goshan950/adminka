@@ -7,7 +7,7 @@ const options = {
     title: "Последние заказы",
     dimensions: {
         datatable: {
-            width: "1400px",
+            width: "1200px",
             height: "600px"
         },
         row: {
@@ -20,59 +20,51 @@ const options = {
             {
                 id: "id",
                 label: "ID",
-                colSize: "150px",
-                editable: false
+                colSize: "130px",
             },
             {
                 id: "service",
                 label: "Сервис",
-                colSize: "100px",
-                editable: true,
+                colSize: "50px",
                 dataType: "text",
                 inputType: "input"
             },
             {
                 id: "site",
                 label: "Сайт",
-                colSize: "80px",
-                editable: true,
+                colSize: "50px",
                 dataType: "text"
             },
             {
                 id: "sms",
                 label: "SMS",
                 colSize: "50px",
-                editable: true,
                 dataType: "text",
                 inputType: "input"
             },
             {
                 id: "status",
                 label: "Статус",
-                colSize: "120px",
-                editable: true,
+                colSize: "100px",
                 dataType: "text",
                 inputType: "input"
             },
             {
                 id: "price",
                 label: "Стоимость",
-                colSize: "100px",
-                editable: false,
+                colSize: "50px",
                 dataType: "text"
             },
             {
                 id: "number",
                 label: "Номер",
-                colSize: "150px",
-                editable: false,
+                colSize: "100px",
                 datatype: "number"
             },
             {
                 id: "country",
                 label: "Страна",
-                colSize: "150px",
-                editable: false,
+                colSize: "100px",
                 datatype: "text"
             }
         ],
