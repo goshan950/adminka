@@ -1,0 +1,12 @@
+.container {
+    padding: 50px;
+}
+
+.info {
+    background-color: white;
+    box-shadow: 5px 5px 5px 0 #DBDBDB;
+    border: solid 0 darkgrey;
+    border-radius: 1em;
+    flex-grow: 1;
+    overflow: hidden;
+}

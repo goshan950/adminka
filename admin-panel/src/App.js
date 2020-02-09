@@ -8,7 +8,7 @@ import Header from "./Components/Header/Header";
 import Navbar from "./Components/NewNavbar/Navbar";
 import Profile from "./Components/Profile/Profile";
 import Tokens from "./Components/Tokens/Tokens";
-import MyTable from "./Components/Table/Table";
+import MyTable from "./Components/Table/MyTable";
 
 function App() {
   return (
