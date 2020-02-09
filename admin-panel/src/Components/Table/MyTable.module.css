@@ -1,12 +1,13 @@
 .container {
     padding: 50px;
+    display: flex;
+    justify-content: center;
 }
 
 .info {
+    width: 1400px;
     background-color: white;
     box-shadow: 5px 5px 5px 0 #DBDBDB;
-    border: solid 0 darkgrey;
     border-radius: 1em;
-    flex-grow: 1;
     overflow: hidden;
 }

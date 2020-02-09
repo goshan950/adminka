@@ -29,25 +29,25 @@ class Navbar extends React.Component {
                     theme="light"
                     inlineCollapsed={this.state.collapsed}
                 >
-                    <Menu.Item key="1">
+                    <Menu.Item key="1" style={{ marginBottom: 15 }}>
                         <NavLink to="/profile">
                             <Icon type="user" style={{ fontSize: '26px' }} />
                             <span>Личный кабинет</span>
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="2">
+                    <Menu.Item key="2" style={{ marginBottom: 15 }}>
                         <NavLink to="/table">
                             <Icon type="table" style={{ fontSize: '26px' }} />
                             <span>Таблица заказов</span>
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="3">
+                    <Menu.Item key="3" style={{ marginBottom: 15 }}>
                         <NavLink to="/tokens">
                             <Icon type="dollar" style={{ fontSize: '26px' }}  />
                             <span>Токены</span>
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="4">
+                    <Menu.Item key="4" style={{ marginBottom: 15 }}>
                     <NavLink to="/exit">
                         <Icon type="import" style={{ fontSize: '26px' }}  />
                         <span>Выход</span>

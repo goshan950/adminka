@@ -6,7 +6,6 @@
 }
 
 .block {
-    flex-grow: 1;
 }
 
 .blockTitle {
@@ -47,7 +46,7 @@
 .info {
     display: flex;
     flex-direction: column;
-    margin: 40px 10px 10px 10px;
+    margin: 20px 10px 10px 10px;
     max-width: 700px;
     height: 200px;
     align-items: center;
@@ -72,15 +71,16 @@
 }
 
 .table {
+    width: 600px;
     margin: 10px;
-    max-width: 700px;
-    flex-grow: 1;
     background-color: white;
     box-shadow: 5px 5px 5px 0 #DBDBDB;
     border-radius: 2em;
+    overflow: hidden;
 }
 
 .tableTitle {
+    width: 600px;
     height: 40px;
     text-align: center;
     display: flex;

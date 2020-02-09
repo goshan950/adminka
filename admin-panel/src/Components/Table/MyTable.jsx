@@ -7,8 +7,8 @@ const options = {
     title: "Последние заказы",
     dimensions: {
         datatable: {
-            width: "100%",
-            height: "50%"
+            width: "1400px",
+            height: "600px"
         },
         row: {
             height: "60px"
@@ -130,13 +130,13 @@ const options = {
         ]
     },
     features: {
-        canEdit: true,
-        canDelete: true,
+        canEdit: false,
+        canDelete: false,
         canDownload: true,
         canSearch: true,
         canRefreshRows: true,
         canOrderColumns: true,
-        canSelectRow: true,
+        canSelectRow: false,
         canSaveUserConfiguration: true,
         userConfiguration: {
             columnsOrder: ["id", "service", "site", "sms", "status", "price", "number", "country"],

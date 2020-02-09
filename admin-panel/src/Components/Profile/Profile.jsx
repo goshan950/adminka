@@ -1,64 +1,57 @@
 import React, {Component} from 'react';
 import s from './Profile.module.css';
-import { Table, Button } from 'antd';
+import { Button } from 'antd';
+import {Datatable} from "@o2xp/react-datatable";
 
-const columns = [
-    {
-        title: 'Дата',
-        dataIndex: 'date',
-        key: 'date',
-        render: text => <a>{text}</a>,
+let options  = {
+    dimensions: {
+        datatable: {
+            width: "600px",
+            height: "500px"
+        },
+        row: {
+            height: "60px"
+        }
     },
-    {
-        title: 'Сумма',
-        dataIndex: 'money',
-        key: 'money',
-    },
-    {
-        title: 'Статус',
-        dataIndex: 'status',
-        key: 'status',
-    },
-];
+    keyColumn: 'id',
+    data: {
+        columns: [
+            {
+                id: "date",
+                label: "Дата",
+                colSize: "80px"
+            },
+            {
+                id: "money",
+                label: "Сумма",
+                colSize: "50px"
+            },
+            {
+                id: "status",
+                label: "Статус",
+                colSize: "50px"
+            },
+        ],
+        rows: [
+            {
+                date: "29.07.2019",
+                money: 280,
+                status: "Подтверждено"
+            },
+            {
+                date: "19.12.2019",
+                money: 340,
+                status: "Выполняется"
+            },
+            {
+                date: "22.01.2020",
+                money: 140,
+                status: "Подтверждено"
+            }
+        ],
+    }
+};
 
-const data = [
-    {
-        key: '1',
-        date: '02.08.2020',
-        money: '100р.',
-        status: 'Подтверждено',
-    },
-    {
-        key: '2',
-        date: '01.08.2020',
-        money: '150р.',
-        status: 'Подтверждено',
-    },
-    {
-        key: '3',
-        date: '01.08.2020',
-        money: '200р.',
-        status: 'Подтверждено',
-    },
-    {
-        key: '4',
-        date: '01.08.2020',
-        money: '200р.',
-        status: 'Подтверждено',
-    },
-    {
-        key: '5',
-        date: '01.08.2020',
-        money: '200р.',
-        status: 'Подтверждено',
-    },
-    {
-        key: '6',
-        date: '01.08.2020',
-        money: '200р.',
-        status: 'Подтверждено',
-    },
-];
 
 class Profile extends Component {
     render() {
@@ -91,7 +84,7 @@ class Profile extends Component {
                     <div className={s.tableTitle}>
                         История оплаты
                     </div>
-                    <Table style={{marginLeft: 20, marginBottom: 20, marginRight: 20}} columns={columns} dataSource={data}/>
+                    <Datatable options={options} />
                 </div>
 
             </div>
