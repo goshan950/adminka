@@ -1,7 +1,6 @@
 .app-wrapper {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: #333;
   display: flex;
   flex-direction: column;
 }
@@ -9,8 +8,8 @@
 .basic {
   display: flex;
   background-color: whitesmoke;
-  height: 90vh;
   padding-top: 20px;
+  min-height: 90vh;
 }
 
 .content {

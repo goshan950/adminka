@@ -1,6 +1,6 @@
 import React from "react";
 import "./Authorization.scss";
-import { Login, Register } from "./index";
+import { Login, Register } from "./Login-register/LoginRegister";
 
 class Authorization extends React.Component {
     constructor(props) {
@@ -30,9 +30,10 @@ class Authorization extends React.Component {
 
     render() {
         const { isLogginActive } = this.state;
-        const current = isLogginActive ? "Register" : "Login";
-        const currentActive = isLogginActive ? "login" : "register";
+        const current = isLogginActive ? "Регистрация" : "Вход";
+        const currentActive = isLogginActive ? "login" : "Register.jsx";
         return (
+            <div className="bg-modal">
             <div className="App">
                 <div className="login">
                     <div className="container" ref={ref => (this.container = ref)}>
@@ -50,6 +51,7 @@ class Authorization extends React.Component {
                         onClick={this.changeState.bind(this)}
                     />
                 </div>
+            </div>
             </div>
         );
     }

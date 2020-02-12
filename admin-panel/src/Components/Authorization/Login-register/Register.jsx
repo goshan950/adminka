@@ -1,5 +1,5 @@
 import React from "react";
-import loginImg from "../../kopeechkaLogo.png";
+import loginImg from "../../../kopeechkaLogo.png";
 
 export class Register extends React.Component {
     constructor(props) {
@@ -9,29 +9,29 @@ export class Register extends React.Component {
     render() {
         return (
             <div className="base-container" ref={this.props.containerRef}>
-                <div className="header">Register</div>
+                {/*<div className="header">Register</div>*/}
                 <div className="content">
                     <div className="image">
                         <img src={loginImg} />
                     </div>
                     <div className="form">
-                        <div className="form-group">
+                        {/*<div className="form-group">
                             <label htmlFor="username">Username</label>
                             <input type="text" name="username" placeholder="username" />
+                        </div>*/}
+                        <div className="form-group">
+                            {/*<label htmlFor="email">Введите вашу почту</label>*/}
+                            <input type="text" name="email" placeholder="Введите вашу почту"/>
                         </div>
                         <div className="form-group">
-                            <label htmlFor="email">Email</label>
-                            <input type="text" name="email" placeholder="email" />
-                        </div>
-                        <div className="form-group">
-                            <label htmlFor="password">Password</label>
-                            <input type="text" name="password" placeholder="password" />
+                            {/*<label htmlFor="password">Пароль</label>*/}
+                            {/*<input type="text" name="password" placeholder="Пароль"/>*/}
                         </div>
                     </div>
                 </div>
                 <div className="footer">
                     <button type="button" className="btn">
-                        Register
+                        Регистрация
                     </button>
                 </div>
             </div>

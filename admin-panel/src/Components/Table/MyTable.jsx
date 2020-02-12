@@ -7,7 +7,7 @@ const options = {
     title: "Последние заказы",
     dimensions: {
         datatable: {
-            width: "1200px",
+            width: "900px",
             height: "600px"
         },
         row: {
@@ -20,25 +20,25 @@ const options = {
             {
                 id: "id",
                 label: "ID",
-                colSize: "130px",
+                colSize: "140px"
             },
             {
                 id: "service",
                 label: "Сервис",
-                colSize: "50px",
+                colSize: "60px",
                 dataType: "text",
                 inputType: "input"
             },
             {
                 id: "site",
                 label: "Сайт",
-                colSize: "50px",
+                colSize: "60px",
                 dataType: "text"
             },
             {
                 id: "sms",
                 label: "SMS",
-                colSize: "50px",
+                colSize: "80px",
                 dataType: "text",
                 inputType: "input"
             },
@@ -52,13 +52,13 @@ const options = {
             {
                 id: "price",
                 label: "Стоимость",
-                colSize: "50px",
+                colSize: "100px",
                 dataType: "text"
             },
             {
                 id: "number",
                 label: "Номер",
-                colSize: "100px",
+                colSize: "110px",
                 datatype: "number"
             },
             {
