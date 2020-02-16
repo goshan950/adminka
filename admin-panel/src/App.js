@@ -23,6 +23,10 @@ class App extends Component {
             return <Preloader/>
         }
 
+        if (!this.props.isAuth) {
+            return <Authorization/>
+        }
+
         return (
             <div className='app-wrapper'>
                 <Header/>
@@ -45,7 +49,8 @@ class App extends Component {
 }
 
 const mapStateToProps = (state) => ({
-    initialized: state.app.initialized
+    initialized: state.app.initialized,
+    isAuth: state.auth.isAuth
 });
 
 export default compose(

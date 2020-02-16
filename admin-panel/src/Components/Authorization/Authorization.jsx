@@ -1,6 +1,7 @@
 import React from "react";
 import "./Authorization.scss";
 import { Login, Register } from "./Login-register/LoginRegister";
+import {reduxForm} from "redux-form";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
@@ -15,7 +16,9 @@ class Authorization extends React.Component {
 
     componentDidMount() {
         //Add .right by default
-        this.rightSide.classList.add("right");
+        if (!this.props.isAuth) {
+        this.rightSide.classList.add("right")
+        }
     }
 
     changeState() {
@@ -32,16 +35,22 @@ class Authorization extends React.Component {
     }
 
     render() {
+        const onSubmit = (formData) => {
+            this.props.login(formData.email, formData.password, true)
+        };
         const { isLogginActive } = this.state;
         const current = isLogginActive ? "Регистрация" : "Вход";
         const currentActive = isLogginActive ? "login" : "Register.jsx";
+        if (this.props.isAuth) {
+            return <Redirect to={"/profile"} />
+        }
         return (
             <div className="bg-modal">
             <div className="App">
                 <div className="login">
                     <div className="container" ref={ref => (this.container = ref)}>
                         {isLogginActive && (
-                            <Login containerRef={ref => (this.current = ref)} />
+                            <LoginReduxForm onSubmit={onSubmit} containerRef={ref => (this.current = ref)} />
                         )}
                         {!isLogginActive && (
                             <Register containerRef={ref => (this.current = ref)} />
@@ -60,6 +69,8 @@ class Authorization extends React.Component {
     }
 }
 
+const LoginReduxForm = reduxForm({form: 'login'}) (Login);
+
 const RightSide = props => {
     return (
         <div
@@ -74,4 +85,8 @@ const RightSide = props => {
     );
 };
 
-export default Authorization;
+const mapStateToProps = (state) => ({
+    isAuth: state.auth.isAuth
+});
+
+export default connect(mapStateToProps, {login})(Authorization);
