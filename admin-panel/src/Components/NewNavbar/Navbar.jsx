@@ -47,11 +47,11 @@ class Navbar extends React.Component {
                             <span>Токены</span>
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="4" style={{ marginBottom: 15 }}>
-                    <NavLink to="/exit">
+                    <Menu.Item key="4" style={{ marginBottom: 15 }} onClick={this.props.logout}>
+                    {/*<NavLink to="/exit">*/}
                         <Icon type="import" style={{ fontSize: '26px' }}  />
                         <span>Выход</span>
-                    </NavLink>
+                    {/*</NavLink>*/}
                 </Menu.Item>
                 </Menu>
             </div>

@@ -53,7 +53,7 @@ class Authorization extends React.Component {
                             <LoginReduxForm onSubmit={onSubmit} containerRef={ref => (this.current = ref)} />
                         )}
                         {!isLogginActive && (
-                            <Register containerRef={ref => (this.current = ref)} />
+                            <RegisterReduxForm containerRef={ref => (this.current = ref)} />
                         )}
                     </div>
                     <RightSide
@@ -70,6 +70,7 @@ class Authorization extends React.Component {
 }
 
 const LoginReduxForm = reduxForm({form: 'login'}) (Login);
+const RegisterReduxForm = reduxForm({form: 'register'}) (Register);
 
 const RightSide = props => {
     return (

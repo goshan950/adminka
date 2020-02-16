@@ -4,6 +4,8 @@
     display: flex;
     justify-content: space-around;
     flex-wrap:wrap;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
 .info {
@@ -18,7 +20,7 @@
     border-radius: 2em;
     flex-grow: 1;
     overflow: hidden;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 .head {
@@ -43,6 +45,19 @@
     margin-top: 30px;
 }
 
+.token div {
+    border-radius: 2em;
+    display: flex;
+    flex-grow: 1;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: palegreen;
+    height: 18px;
+    font-weight: bold;
+    padding: 10px 4px;
+}
+
 .content img {
     height: 40px;
     margin-right: 20px;
@@ -50,4 +65,5 @@
 
 .content input {
     height: 30px;
+    width: 200px;
 }

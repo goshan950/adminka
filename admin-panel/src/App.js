@@ -7,7 +7,7 @@ import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./Components/common/Preloader/Preloader";
 
 import Header from "./Components/Header/Header";
-import Navbar from "./Components/NewNavbar/Navbar";
+import NavbarContainer from "./Components/NewNavbar/NavbarContainer";
 import Profile from "./Components/Profile/Profile";
 import Tokens from "./Components/Tokens/Tokens";
 import MyTable from "./Components/Table/MyTable";
@@ -31,7 +31,7 @@ class App extends Component {
             <div className='app-wrapper'>
                 <Header/>
                 <div className='basic'>
-                    <Navbar/>
+                    <NavbarContainer/>
                     <div className='content'>
                         <Route path='/profile'
                                render={() => <Profile/>}/>

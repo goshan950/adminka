@@ -1,6 +1,8 @@
 import React from "react";
 import loginImg from "../../../kopeechkaLogo.png";
 import {Field} from "redux-form";
+import {required} from "../../../utils/validators/validators";
+import {Input} from "../../common/FormsControls/FormsControls";
 
 export class Login extends React.Component {
     render() {
@@ -13,10 +15,14 @@ export class Login extends React.Component {
                         </div>
                         <div className="form">
                             <div className="form-group">
-                                <Field component={"input"} type={"text"} name={"email"} placeholder={"Почта"}/>
+                                <Field component={Input} type={"text"}
+                                       name={"email"} placeholder={"Почта"}
+                                       validate={[required]}/>
                             </div>
                             <div className="form-group">
-                                <Field component={"input"} type={"password"} name={"password"} placeholder={"Пароль"}/>
+                                <Field component={Input} type={"password"}
+                                       name={"password"} placeholder={"Пароль"}
+                                       validate={[required]}/>
                             </div>
                         </div>
                     </div>
