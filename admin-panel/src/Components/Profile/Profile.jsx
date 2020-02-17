@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import s from './Profile.module.css';
-import { Button } from 'antd';
+import {Button, Input} from 'antd';
 import {Datatable} from "@o2xp/react-datatable";
 
 let options  = {
@@ -64,7 +64,7 @@ class Profile extends Component {
                             API ключ
                         </div>
                         <div className={s.tokenContent}>
-                            <input />
+                            <Input/>
                             <Button className={s.button}>Сгенерировать новый ключ</Button>
                         </div>
                     </div>
