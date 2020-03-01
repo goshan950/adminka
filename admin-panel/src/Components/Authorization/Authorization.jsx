@@ -1,10 +1,11 @@
 import React from "react";
-import "./Authorization.scss";
-import { Login, Register } from "./Login-register/LoginRegister";
+import { Login } from "./Login-register/Login";
+import { Register } from "./Login-register/Register";
 import {reduxForm} from "redux-form";
 import {connect} from "react-redux";
 import {login} from "../../redux/auth-reducer";
 import {Redirect} from "react-router-dom";
+import "./Authorization.scss";
 
 class Authorization extends React.Component {
     constructor(props) {
