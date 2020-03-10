@@ -80,9 +80,7 @@ const RightSide = props => {
             ref={props.containerRef}
             onClick={props.onClick}
         >
-            <div className="inner-container">
-                <div className="text">{props.current}</div>
-            </div>
+            <div className="text">{props.current}</div>
         </div>
     );
 };

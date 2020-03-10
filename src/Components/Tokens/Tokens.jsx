@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import s from './Tokens.module.css';
-import {Badge, Input} from "antd";
+import {Badge, Input, Button} from "antd";
 
 class Tokens extends Component {
     render() {
@@ -16,25 +16,25 @@ class Tokens extends Component {
                     <div className={s.content}>
                         <div className={s.token}>
                             <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>
-                            <Badge count={<div>100р.</div>} style={{backgroundColor: '#6ebdff' }} offset={[0, -5]}>
+                            <Badge count={<Button size="small">100р.</Button>} offset={[0, -5]}>
                                 <Input/>
                             </Badge>
                         </div>
                         <div className={s.token}>
                             <img src='https://smshub.org/assets/ico/logo.png' alt='#'/>
-                            <Badge count={<div>10р.</div>} style={{backgroundColor: '#6ebdff' }} offset={[0, -5]}>
+                            <Badge count={<Button size="small">550р.</Button>} offset={[0, -5]}>
                                 <Input/>
                             </Badge>
                         </div>
                         <div className={s.token}>
                             <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>
-                            <Badge count={<div>245р.</div>} style={{backgroundColor: '#6ebdff' }} offset={[0, -5]}>
+                            <Badge count={<Button size="small">10р.</Button>} offset={[0, -5]}>
                                 <Input/>
                             </Badge>
                         </div>
                         <div className={s.token}>
                             <img src='https://smshub.org/assets/ico/logo.png' alt='#'/>
-                            <Badge count={<div>1000р.</div>} style={{backgroundColor: '#6ebdff' }} offset={[0, -5]}>
+                            <Badge count={<Button size="small">1000р.</Button>} offset={[0, -5]}>
                                 <Input/>
                             </Badge>
                         </div>

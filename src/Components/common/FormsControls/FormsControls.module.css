@@ -27,3 +27,10 @@
 .formSummaryError {
     color: red;
 }
+
+@media (max-width: 767px) {
+    .formControl input {
+        height: 32px;
+        min-width: 16em;
+    }
+}

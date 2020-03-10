@@ -1,17 +1,35 @@
 .app-wrapper {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  display: flex;
-  flex-direction: column;
 }
 
 .basic {
-  display: flex;
   background-color: whitesmoke;
   padding-top: 20px;
+  display: flex;
   min-height: 90vh;
 }
 
+.navbar {
+  order: 1;
+}
+
 .content {
+  order: 2;
   flex-grow: 1;
+}
+
+@media (max-width: 992px) {
+  .basic {
+    flex-direction: column;
+  }
+  .navbar {
+    order: 2;
+    position: sticky;
+    bottom: 0;
+    z-index: 100;
+  }
+  .content {
+    order: 1;
+  }
 }

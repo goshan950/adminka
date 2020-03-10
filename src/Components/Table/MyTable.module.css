@@ -1,12 +1,6 @@
-.container {
-    padding: 50px 20px 20px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.info {
+.table {
+    margin: 50px 20px 20px 20px;
     background-color: white;
-    width: 900px;
     box-shadow: 5px 5px 5px 0 #DBDBDB;
     border-radius: 1em;
     overflow: hidden;

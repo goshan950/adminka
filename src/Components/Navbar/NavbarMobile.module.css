@@ -1,0 +1,21 @@
+.container {
+    background-color: #f8f9fa;
+    box-shadow: 0 -4px 10px 0 #E2E2E2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+}
+
+.item {
+    color: grey;
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.activeLink {
+    color: #1890ff;
+}

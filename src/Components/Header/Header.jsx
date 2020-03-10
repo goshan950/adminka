@@ -13,7 +13,7 @@ const { confirm } = Modal;
 function showConfirm() {
     confirm({
         title: 'Введите сумму',
-        content: <InputNumber min={0} max={100000} step={1} onChange={onChange}/>,
+        content: <InputNumber style={{width: 280}} min={0} max={100000} step={1} onChange={onChange}/>,
         okText: 'Пополнить',
         cancelText: 'Отмена',
         onOk() {
@@ -68,53 +68,42 @@ class Header extends Component {
 
                     <div className={s.number}>
                         <Button block onClick={() => this.setModal1Visible(true)}>Получить номер</Button>
-
-                        <Modal
-                            style={{ top: 20 }}
-                            okText={'Оплатить'}
-                            cancelText={'Отмена'}
-                            visible={this.state.modal1Visible}
-                            onOk={() => this.setModal1Visible(false)}
-                            onCancel={() => this.setModal1Visible(false)}
-                        >
-                            <p>some contents...</p>
-                        </Modal>
-
-                        <Modal
-                            style={{ top: 20 }}
-                            okText={'Оплатить'}
-                            cancelText={'Отмена'}
-                            visible={this.state.modal1Visible}
-                            onOk={() => this.setModal1Visible(false)}
-                            onCancel={() => this.setModal1Visible(false)}
-                        >
-                            <Input placeholder={'Введите домен'} style={{ marginTop: 20}}/>
-                            <Select
-                                showSearch
-                                style={{ width: 200, marginTop: 20}}
-                                placeholder="Выберите страну"
-                                optionFilterProp="children"
-                                onChange={onChangeCountry}
-                                onFocus={onFocus}
-                                onBlur={onBlur}
-                                onSearch={onSearch}
-                                filterOption={(input, option) =>
-                                    option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                                }
-                            >
-                                <Option value="russia">Россия</Option>
-                                <Option value="usa">США</Option>
-                                <Option value="itali">Италия</Option>
-                            </Select>
-                        </Modal>
-
                     </div>
-                    <div className={s.ava}>
+
+                    <Modal
+                        style={{top: 20}}
+                        okText={'Оплатить'}
+                        cancelText={'Отмена'}
+                        visible={this.state.modal1Visible}
+                        onOk={() => this.setModal1Visible(false)}
+                        onCancel={() => this.setModal1Visible(false)}
+                    >
+                        <Input placeholder={'Введите домен'} style={{marginTop: 20}}/>
+                        <Select
+                            showSearch
+                            style={{width: 200, marginTop: 20}}
+                            placeholder="Выберите страну"
+                            optionFilterProp="children"
+                            onChange={onChangeCountry}
+                            onFocus={onFocus}
+                            onBlur={onBlur}
+                            onSearch={onSearch}
+                            filterOption={(input, option) =>
+                                option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
+                            }
+                        >
+                            <Option value="russia">Россия</Option>
+                            <Option value="usa">США</Option>
+                            <Option value="itali">Италия</Option>
+                        </Select>
+                    </Modal>
+
+                    <div className={s.balance}>
                         <Avatar shape="square" size={48} icon="user" style={{marginRight: 20}}/>
                         <Dropdown overlay={
                             <Menu>
                                 <Menu.Item key="1">
-                                    <Button  type="link" onClick={showConfirm}>
+                                    <Button type="link" onClick={showConfirm}>
                                         Пополнить
                                     </Button>
                                 </Menu.Item>

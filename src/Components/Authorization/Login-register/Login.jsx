@@ -11,7 +11,6 @@ export class Login extends React.Component {
         return (
             <form onSubmit={this.props.handleSubmit}>
                 <div className={style.baseContainer}>
-
                     <div className={style.content}>
                         <div className={style.image}>
                             <img src={loginImg} alt='#'/>
@@ -33,10 +32,9 @@ export class Login extends React.Component {
 
                     <div className={style.footer}>
                         <button className={style.btn}>
-                            Авторизоваться
+                            Войти
                         </button>
                     </div>
-
                 </div>
             </form>
         );

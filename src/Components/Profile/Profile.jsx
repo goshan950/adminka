@@ -1,63 +1,56 @@
 import React, {Component} from 'react';
 import s from './Profile.module.css';
-import {Button, Input} from 'antd';
-import {Datatable} from "@o2xp/react-datatable";
+import {Button, Table, Input} from 'antd';
 
-let options  = {
-    dimensions: {
-        datatable: {
-            width: "600px",
-            height: "500px"
-        },
-        row: {
-            height: "60px"
-        }
+const columns = [
+    {
+        title: 'Дата',
+        dataIndex: 'date',
+        key: 'date'
     },
-    keyColumn: 'id',
-    data: {
-        columns: [
-            {
-                id: "date",
-                label: "Дата",
-                colSize: "80px"
-            },
-            {
-                id: "money",
-                label: "Сумма",
-                colSize: "50px"
-            },
-            {
-                id: "status",
-                label: "Статус",
-                colSize: "50px"
-            },
-        ],
-        rows: [
-            {
-                date: "29.07.2019",
-                money: 280,
-                status: "Подтверждено"
-            },
-            {
-                date: "19.12.2019",
-                money: 340,
-                status: "Выполняется"
-            },
-            {
-                date: "22.01.2020",
-                money: 140,
-                status: "Подтверждено"
-            }
-        ],
-    }
-};
+    {
+        title: 'Сумма',
+        dataIndex: 'money',
+        key: 'money'
+    },
+    {
+        title: 'Статус',
+        dataIndex: 'status',
+        key: 'status'
+    },
+];
 
+const data = [
+    {
+        key: '1',
+        date: '03.04.2020',
+        money: '150р',
+        status: 'Подтверждено'
+    },
+    {
+        key: '2',
+        date: '03.04.2020',
+        money: '150р',
+        status: 'Подтверждено'
+    },
+    {
+        key: '3',
+        date: '03.04.2020',
+        money: '150р',
+        status: 'Подтверждено'
+    },
+    {
+        key: '4',
+        date: '03.04.2020',
+        money: '150р',
+        status: 'Подтверждено'
+    },
+];
 
 class Profile extends Component {
     render() {
         return (
             <div className={s.container}>
-
                 <div className={s.block}>
                     <div className={s.token}>
                         <div className={s.blockTitle}>
@@ -84,9 +77,8 @@ class Profile extends Component {
                     <div className={s.tableTitle}>
                         История оплаты
                     </div>
-                    <Datatable options={options} />
+                    <Table size="middle" columns={columns} bordered={true} dataSource={data} />
                 </div>
-
             </div>
         );
     }
