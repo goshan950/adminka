@@ -12,6 +12,7 @@ import Profile from "./Components/Profile/Profile";
 import Tokens from "./Components/Tokens/Tokens";
 import MyTable from "./Components/Table/MyTable";
 import Authorization from "./Components/Authorization/Authorization";
+import ApiGuide from "./Components/ApiGuide/ApiGuide";
 
 class App extends Component {
     componentDidMount() {
@@ -41,8 +42,8 @@ class App extends Component {
                                render={() => <MyTable/>}/>
                         <Route path='/tokens'
                                render={() => <Tokens/>}/>
-                        <Route path='/login'
-                               render={() => <Authorization/>}/>
+                        <Route path='/api'
+                               render={() => <ApiGuide/>}/>
                     </div>
                 </div>
             </div>

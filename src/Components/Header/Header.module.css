@@ -27,6 +27,10 @@
     align-items: center;
 }
 
+.ava {
+    margin-right: 20px;
+}
+
 @media (max-width: 1200px) {
     .logo {
         height: 40px;
@@ -49,5 +53,11 @@
     .number {
           width: auto;
           display: none;
-      }
+    }
+    .ava {
+        margin-right: 5px;
+    }
+    .container {
+        margin: 0 10px;
+    }
 }

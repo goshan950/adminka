@@ -21,7 +21,7 @@ class NavbarMobile extends React.Component {
                      <Icon type="dollar" style={{fontSize: '26px'}}/>
                 </NavLink>
                 <NavLink to="/api" className={s.item} activeClassName={s.activeLink}>
-                    <Icon type="global" style={{fontSize: '26px'}}/>
+                    <Icon type="solution" style={{fontSize: '26px'}}/>
                 </NavLink>
                 <div className={s.item} onClick={this.props.logout}>
                     <Icon type="import" style={{fontSize: '26px'}}/>

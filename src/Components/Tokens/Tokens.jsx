@@ -39,7 +39,6 @@ class Tokens extends Component {
                             </Badge>
                         </div>
                     </div>
-
                 </div>
             </div>
         );

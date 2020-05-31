@@ -36,12 +36,13 @@
 .content {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    padding: 20px;
+    margin-top: 30px;
 }
 
 .token {
-    margin-top: 30px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .content img {
@@ -63,6 +64,10 @@
 
     .info {
         height: 580px;
+    }
+
+    .container {
+        padding: 20px 10px 10px 10px;
     }
 
     .content img {

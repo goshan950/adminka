@@ -54,7 +54,7 @@ class Navbar extends React.Component {
                     </Menu.Item>
                     <Menu.Item key="5">
                         <NavLink to="/api">
-                            <Icon type="global" style={{fontSize: '24px'}}/>
+                            <Icon type="solution" style={{fontSize: '24px'}}/>
                             <span>API</span>
                         </NavLink>
                     </Menu.Item>

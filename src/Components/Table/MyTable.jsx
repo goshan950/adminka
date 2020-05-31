@@ -77,7 +77,7 @@ class MyTable extends React.Component {
     render() {
         return (
                 <div className={s.table}>
-                    <Table size="middle" scroll={{x: true}} columns={columns} bordered={true} dataSource={data}/>
+                    <Table size="middle" style={{backgroundColor: "white"}} scroll={{x: true}} columns={columns} bordered={true} dataSource={data}/>
                 </div>
         );
     }

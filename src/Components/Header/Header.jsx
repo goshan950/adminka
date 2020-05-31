@@ -13,7 +13,7 @@ const { confirm } = Modal;
 function showConfirm() {
     confirm({
         title: 'Введите сумму',
-        content: <InputNumber style={{width: 280}} min={0} max={100000} step={1} onChange={onChange}/>,
+        content: <InputNumber style={{width: 220}} min={0} max={100000} step={1} onChange={onChange}/>,
         okText: 'Пополнить',
         cancelText: 'Отмена',
         onOk() {
@@ -99,7 +99,7 @@ class Header extends Component {
                     </Modal>
 
                     <div className={s.balance}>
-                        <Avatar shape="square" size={48} icon="user" style={{marginRight: 20}}/>
+                        <Avatar shape="square" className={s.ava} size={48} icon="user"/>
                         <Dropdown overlay={
                             <Menu>
                                 <Menu.Item key="1">
