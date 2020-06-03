@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/demo_admin_panel/static/css/main.ec2a9b48.chunk.css",
+    "main.js": "/demo_admin_panel/static/js/main.e8fec503.chunk.js",
+    "main.js.map": "/demo_admin_panel/static/js/main.e8fec503.chunk.js.map",
+    "runtime-main.js": "/demo_admin_panel/static/js/runtime-main.557787fc.js",
+    "runtime-main.js.map": "/demo_admin_panel/static/js/runtime-main.557787fc.js.map",
+    "static/css/2.bb49ca10.chunk.css": "/demo_admin_panel/static/css/2.bb49ca10.chunk.css",
+    "static/js/2.6282913a.chunk.js": "/demo_admin_panel/static/js/2.6282913a.chunk.js",
+    "static/js/2.6282913a.chunk.js.map": "/demo_admin_panel/static/js/2.6282913a.chunk.js.map",
+    "index.html": "/demo_admin_panel/index.html",
+    "precache-manifest.8c149d0bd8e365c809bb50d9e6b9717f.js": "/demo_admin_panel/precache-manifest.8c149d0bd8e365c809bb50d9e6b9717f.js",
+    "service-worker.js": "/demo_admin_panel/service-worker.js",
+    "static/css/2.bb49ca10.chunk.css.map": "/demo_admin_panel/static/css/2.bb49ca10.chunk.css.map",
+    "static/css/main.ec2a9b48.chunk.css.map": "/demo_admin_panel/static/css/main.ec2a9b48.chunk.css.map",
+    "static/js/2.6282913a.chunk.js.LICENSE.txt": "/demo_admin_panel/static/js/2.6282913a.chunk.js.LICENSE.txt",
+    "static/media/kopeechkaLogo.png": "/demo_admin_panel/static/media/kopeechkaLogo.e8877b09.png",
+    "static/media/preloader.svg": "/demo_admin_panel/static/media/preloader.6e7c9db7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.557787fc.js",
+    "static/css/2.bb49ca10.chunk.css",
+    "static/js/2.6282913a.chunk.js",
+    "static/css/main.ec2a9b48.chunk.css",
+    "static/js/main.e8fec503.chunk.js"
+  ]
+}
