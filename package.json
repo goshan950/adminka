@@ -2,7 +2,7 @@
   "name": "admin-panel",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://polyantsevyury.github.io/adminPanel",
+  "homepage": "https://polyantsevyury.github.io/admin-panel",
   "dependencies": {
     "@o2xp/react-datatable": "^1.1.37",
     "@testing-library/jest-dom": "^4.2.4",
