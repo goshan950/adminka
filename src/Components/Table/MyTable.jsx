@@ -56,7 +56,7 @@ class MyTable extends React.Component {
                     ref={node => {
                         this.searchInput = node;
                     }}
-                    placeholder={`Search ${dataIndex}`}
+                    placeholder={`Поиск`}
                     value={selectedKeys[0]}
                     onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
                     onPressEnter={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
@@ -70,10 +70,10 @@ class MyTable extends React.Component {
                         size="small"
                         style={{ width: 90 }}
                     >
-                        Search
+                        Поиск
                     </Button>
                     <Button onClick={() => this.handleReset(clearFilters)} size="small" style={{ width: 90 }}>
-                        Reset
+                        Сброс
                     </Button>
                 </Space>
             </div>
@@ -154,7 +154,7 @@ class MyTable extends React.Component {
                 title: 'Статус',
                 dataIndex: 'status',
                 sorter: (a, b) => a.status.length - b.status.length,
-                sortDirections: ['descend'],
+                sortDirections: ['descend', 'ascend'],
             },
             {
                 title: 'Стоимость',

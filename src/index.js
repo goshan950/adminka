@@ -7,11 +7,16 @@ import * as serviceWorker from './serviceWorker';
 import {HashRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 
+import { ConfigProvider } from 'antd';
+import ruRU from 'antd/es/locale/ru_RU';
+
 ReactDOM.render(
     <HashRouter>
-        <Provider store={store}>
-            <App/>
-        </Provider>
+        <ConfigProvider locale={ruRU}>
+            <Provider store={store}>
+                <App/>
+            </Provider>
+        </ConfigProvider>
     </HashRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
