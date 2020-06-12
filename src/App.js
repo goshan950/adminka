@@ -5,6 +5,7 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./Components/common/Preloader/Preloader";
+import "antd/dist/antd.css";
 
 import Header from "./Components/Header/Header";
 import NavbarContainer from "./Components/Navbar/NavbarContainer";

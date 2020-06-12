@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import s from './Header.module.css';
+import { DownOutlined, UserOutlined } from '@ant-design/icons';
 import {Avatar, Input} from 'antd';
 import {InputNumber} from 'antd';
-import {Menu, Modal, Button, Select, Dropdown, Icon} from 'antd';
+import { Menu, Modal, Button, Select, Dropdown } from 'antd';
 
 function onChange(value) {
     console.log('changed', value);
@@ -99,7 +100,7 @@ class Header extends Component {
                     </Modal>
 
                     <div className={s.balance}>
-                        <Avatar shape="square" className={s.ava} size={48} icon="user"/>
+                        <Avatar shape="square" className={s.ava} size={48} icon={<UserOutlined />}/>
                         <Dropdown overlay={
                             <Menu>
                                 <Menu.Item key="1">
@@ -110,7 +111,7 @@ class Header extends Component {
                             </Menu>
                         }>
                             <Button>
-                                100 руб. <Icon type="down"/>
+                                100 руб. <DownOutlined />
                             </Button>
                         </Dropdown>
                     </div>

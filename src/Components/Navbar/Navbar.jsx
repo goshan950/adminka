@@ -1,5 +1,16 @@
 import React from 'react';
-import {Menu, Icon, Button} from 'antd';
+import { Icon as LegacyIcon } from '@ant-design/compatible';
+
+import {
+    DollarOutlined,
+    ImportOutlined,
+    PlusOutlined,
+    SolutionOutlined,
+    TableOutlined,
+    UserOutlined,
+} from '@ant-design/icons';
+
+import { Menu, Button } from 'antd';
 import {NavLink} from "react-router-dom";
 import s from "./Navbar.module.css";
 
@@ -18,7 +29,7 @@ class Navbar extends React.Component {
         return (
             <div className={s.wrapper}>
                 <Button onClick={this.toggleCollapsed} style={{marginBottom: 16, marginLeft: 20}}>
-                    <Icon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}/>
+                    <LegacyIcon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}/>
                 </Button>
                 <Menu
                     defaultSelectedKeys={['1']}
@@ -30,36 +41,36 @@ class Navbar extends React.Component {
                 >
                     <Menu.Item key="1">
                         <NavLink to="/profile">
-                            <Icon type="user" style={{fontSize: '24px'}}/>
+                            <UserOutlined style={{fontSize: '24px'}} />
                             <span>Личный кабинет</span>
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="2">
                         <NavLink to="/number">
-                            <Icon type="plus" style={{fontSize: '24px'}}/>
+                            <PlusOutlined style={{fontSize: '24px'}} />
                             <span>Получить номер</span>
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="3">
                         <NavLink to="/table">
-                            <Icon type="table" style={{fontSize: '24px'}}/>
+                            <TableOutlined style={{fontSize: '24px'}} />
                             <span>Таблица заказов</span>
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="4">
                         <NavLink to="/tokens">
-                            <Icon type="dollar" style={{fontSize: '24px'}}/>
+                            <DollarOutlined style={{fontSize: '24px'}} />
                             <span>Токены</span>
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="5">
                         <NavLink to="/api">
-                            <Icon type="solution" style={{fontSize: '24px'}}/>
+                            <SolutionOutlined style={{fontSize: '24px'}} />
                             <span>API</span>
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="6" onClick={this.props.logout}>
-                        <Icon type="import" style={{fontSize: '24px'}}/>
+                        <ImportOutlined style={{fontSize: '24px'}} />
                         <span>Выход</span>
                     </Menu.Item>
                 </Menu>
