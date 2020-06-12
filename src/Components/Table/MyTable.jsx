@@ -1,41 +1,8 @@
 import React from 'react';
 import s from "../Table/MyTable.module.css";
-import { Table } from 'antd';
-
-const columns = [
-    {
-        title: 'ID',
-        dataIndex: 'id',
-    },
-    {
-        title: 'Сервис',
-        dataIndex: 'service',
-    },
-    {
-        title: 'Сайт',
-        dataIndex: 'site',
-    },
-    {
-        title: 'SMS',
-        dataIndex: 'sms',
-    },
-    {
-        title: 'Статус',
-        dataIndex: 'status',
-    },
-    {
-        title: 'Стоимость',
-        dataIndex: 'price',
-    },
-    {
-        title: 'Номер',
-        dataIndex: 'number',
-    },
-    {
-        title: 'Страна',
-        dataIndex: 'country',
-    },
-];
+import { Table, Input, Button, Space } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
+import Highlighter from 'react-highlight-words';
 
 const data = [
     {
@@ -44,10 +11,11 @@ const data = [
         service: "5sim",
         site: "vk",
         sms: "смс",
-        status: "Отправлено",
+        status: "Получено",
         price: "2р",
         number: "+78005553535",
         country: "Россия",
+        balance: '4'
     },
     {
         key: '2',
@@ -59,28 +27,164 @@ const data = [
         price: "2р",
         number: "+78005553535",
         country: "Россия",
+        balance: '4'
     },
     {
         key: '3',
         id: '50cq32523r23dff',
         service: "5sim",
-        site: "vk",
+        site: "yandex",
         sms: "смс",
         status: "Отправлено",
         price: "2р",
         number: "+78005553535",
         country: "Россия",
+        balance: '4'
     },
 ];
 
 class MyTable extends React.Component {
+    state = {
+        searchText: '',
+        searchedColumn: '',
+    };
+
+    getColumnSearchProps = dataIndex => ({
+        filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
+            <div style={{ padding: 8 }}>
+                <Input
+                    ref={node => {
+                        this.searchInput = node;
+                    }}
+                    placeholder={`Search ${dataIndex}`}
+                    value={selectedKeys[0]}
+                    onChange={e => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+                    onPressEnter={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
+                    style={{ width: 188, marginBottom: 8, display: 'block' }}
+                />
+                <Space>
+                    <Button
+                        type="primary"
+                        onClick={() => this.handleSearch(selectedKeys, confirm, dataIndex)}
+                        icon={<SearchOutlined />}
+                        size="small"
+                        style={{ width: 90 }}
+                    >
+                        Search
+                    </Button>
+                    <Button onClick={() => this.handleReset(clearFilters)} size="small" style={{ width: 90 }}>
+                        Reset
+                    </Button>
+                </Space>
+            </div>
+        ),
+        filterIcon: filtered => <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />,
+        onFilter: (value, record) =>
+            record[dataIndex].toString().toLowerCase().includes(value.toLowerCase()),
+        onFilterDropdownVisibleChange: visible => {
+            if (visible) {
+                setTimeout(() => this.searchInput.select());
+            }
+        },
+        render: text =>
+            this.state.searchedColumn === dataIndex ? (
+                <Highlighter
+                    highlightStyle={{ backgroundColor: '#ffc069', padding: 0 }}
+                    searchWords={[this.state.searchText]}
+                    autoEscape
+                    textToHighlight={text.toString()}
+                />
+            ) : (
+                text
+            ),
+    });
+
+    handleSearch = (selectedKeys, confirm, dataIndex) => {
+        confirm();
+        this.setState({
+            searchText: selectedKeys[0],
+            searchedColumn: dataIndex,
+        });
+    };
+
+    handleReset = clearFilters => {
+        clearFilters();
+        this.setState({ searchText: '' });
+    };
+
     render() {
+        const columns = [
+            {
+                title: 'ID',
+                dataIndex: 'id',
+                ...this.getColumnSearchProps('id'),
+            },
+            {
+                title: 'Сервис',
+                dataIndex: 'service',
+                filters: [
+                    {
+                        text: '5sim',
+                        value: '5sim',
+                    },
+                ],
+                onFilter: (value, record) => record.service.indexOf(value) === 0,
+            },
+            {
+                title: 'Сайт',
+                dataIndex: 'site',
+                filters: [
+                    {
+                        text: 'vk.ru',
+                        value: 'vk',
+                    },
+                    {
+                        text: 'yandex.ru',
+                        value: 'yandex',
+                    },
+                ],
+                onFilter: (value, record) => record.site.indexOf(value) === 0,
+            },
+            {
+                title: 'SMS',
+                dataIndex: 'sms',
+                ...this.getColumnSearchProps('service'),
+            },
+            {
+                title: 'Статус',
+                dataIndex: 'status',
+                sorter: (a, b) => a.status.length - b.status.length,
+                sortDirections: ['descend'],
+            },
+            {
+                title: 'Стоимость',
+                dataIndex: 'price',
+            },
+            {
+                title: 'Номер',
+                dataIndex: 'number',
+                ...this.getColumnSearchProps('number'),
+            },
+            {
+                title: 'Страна',
+                dataIndex: 'country',
+                ...this.getColumnSearchProps('country'),
+            },
+            {
+                title: 'Остаточный баланс сервиса',
+                dataIndex: 'balance',
+                width: 140,
+            },
+        ];
+
         return (
-                <div className={s.table}>
-                    <Table size="middle" style={{backgroundColor: "white"}} scroll={{x: true}} columns={columns} bordered={true} dataSource={data}/>
-                </div>
-        );
+            <div className={s.table}>
+                <Table size="middle" style={{backgroundColor: "white"}} scroll={{x: true}} bordered={true}
+                       columns={columns} dataSource={data}/>
+            </div>
+        )
     }
 }
+
 
 export default MyTable;
