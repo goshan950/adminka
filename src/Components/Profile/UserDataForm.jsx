@@ -3,16 +3,18 @@ import { Form, Input, Button, Select } from 'antd';
 
 const layout = {
     labelCol: {
-        span: 6,
+        span: 5,
     },
     wrapperCol: {
-        span: 16,
+        span: 19,
     },
 };
+
 const tailLayout = {
     wrapperCol: {
-        offset: 24,
+        offset: 20
     },
+    justify: 'end',
 };
 
 const { Option } = Select;

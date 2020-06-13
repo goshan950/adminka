@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import s from './Profile.module.css';
-import {Button, Table, Input} from 'antd';
-import {UserDataForm} from "./UserDataForm";
-import userPhoto from './user.png'
+import {Button, Table, Input, Progress} from 'antd';
+import {ChangeEmailForm} from "./ChangeEmailForm";
+import userPhoto from '../../images/user.png'
 import {CameraOutlined} from '@ant-design/icons';
+import {UserDataForm} from "./UserDataForm";
 
 const columns = [
     {
@@ -80,6 +81,42 @@ class Profile extends Component {
                     </div>
                     <div className={s.token}>
                         <div className={s.blockTitle}>
+                            Сменить Пароль
+                        </div>
+                        <div className={s.profile}>
+                            <div className={s.userDataForm}>
+                                <ChangeEmailForm/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div className={s.block2}>
+                    <div className={s.table}>
+                        <div className={s.tableTitle}>
+                            История оплаты
+                        </div>
+                        <Table size="middle" columns={columns} bordered={true} dataSource={data} />
+                    </div>
+                    <div className={s.token}>
+                        <div className={s.blockTitle}>
+                            Информация о подписке
+                        </div>
+                        <div className={s.infoContent}>
+                            <Progress type="circle" percent={75} format={percent => `${percent} Дней`} />
+                        </div>
+                    </div>
+                    <div className={s.token}>
+                        <div className={s.blockTitle}>
+                            Активировать Купон
+                        </div>
+                        <div className={s.tokenContent}>
+                            <Input/>
+                            <Button className={s.button}>Активировать</Button>
+                        </div>
+                    </div>
+                    <div className={s.token}>
+                        <div className={s.blockTitle}>
                             API ключ
                         </div>
                         <div className={s.tokenContent}>
@@ -87,23 +124,6 @@ class Profile extends Component {
                             <Button className={s.button}>Сгенерировать новый ключ</Button>
                         </div>
                     </div>
-                    <div className={s.info}>
-                        <div className={s.blockTitle}>
-                            Информация о подписке
-                        </div>
-                        <div className={s.infoContent}>
-                                <p>Стоимость</p>
-                                <p>Дата окончания (истекает через 23 дня)</p>
-                                <Button className={s.button}>Продлить</Button>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={s.table}>
-                    <div className={s.tableTitle}>
-                        История оплаты
-                    </div>
-                    <Table size="middle" columns={columns} bordered={true} dataSource={data} />
                 </div>
             </div>
         );
