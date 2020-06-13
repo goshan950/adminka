@@ -17,25 +17,33 @@ class Tokens extends Component {
                         <div className={s.token}>
                             <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>
                             <Badge count={<Button size="small">100р.</Button>} offset={[0, -5]}>
-                                <Input/>
+                                <Badge count={<Button size="small">+</Button>} offset={[0, 30]}>
+                                    <Input/>
+                                </Badge>
                             </Badge>
                         </div>
                         <div className={s.token}>
                             <img src='https://smshub.org/assets/ico/logo.png' alt='#'/>
                             <Badge count={<Button size="small">550р.</Button>} offset={[0, -5]}>
-                                <Input/>
+                                <Badge count={<Button size="small">+</Button>} offset={[0, 30]}>
+                                    <Input/>
+                                </Badge>
                             </Badge>
                         </div>
                         <div className={s.token}>
                             <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>
                             <Badge count={<Button size="small">10р.</Button>} offset={[0, -5]}>
-                                <Input/>
+                                <Badge count={<Button size="small">+</Button>} offset={[0, 30]}>
+                                    <Input/>
+                                </Badge>
                             </Badge>
                         </div>
                         <div className={s.token}>
                             <img src='https://smshub.org/assets/ico/logo.png' alt='#'/>
                             <Badge count={<Button size="small">1000р.</Button>} offset={[0, -5]}>
-                                <Input/>
+                                <Badge count={<Button size="small">+</Button>} offset={[0, 30]}>
+                                    <Input/>
+                                </Badge>
                             </Badge>
                         </div>
                     </div>
