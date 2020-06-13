@@ -1,5 +1,4 @@
 import React from 'react';
-import { Icon as LegacyIcon } from '@ant-design/compatible';
 
 import {
     DollarOutlined,
@@ -8,6 +7,8 @@ import {
     SolutionOutlined,
     TableOutlined,
     UserOutlined,
+    MenuUnfoldOutlined,
+    MenuFoldOutlined,
 } from '@ant-design/icons';
 
 import { Menu, Button } from 'antd';
@@ -29,7 +30,7 @@ class Navbar extends React.Component {
         return (
             <div className={s.wrapper}>
                 <Button onClick={this.toggleCollapsed} style={{marginBottom: 16, marginLeft: 20}}>
-                    <LegacyIcon type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}/>
+                    {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
                 </Button>
                 <Menu
                     defaultSelectedKeys={['1']}
