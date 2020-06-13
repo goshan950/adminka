@@ -16,7 +16,7 @@
     background-color: white;
     box-shadow: 5px 5px 5px 0 #DBDBDB;
     border: solid 0 darkgrey;
-    border-radius: 2em;
+    border-radius: 5px;
     flex-grow: 1;
     overflow: hidden;
     max-width: 800px;
