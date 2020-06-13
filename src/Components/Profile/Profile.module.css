@@ -27,7 +27,9 @@
 }
 
 .profile{
-    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 40px 0 40px;
 }
 
 .tokenContent {
@@ -36,9 +38,6 @@
     align-items: center;
     justify-content: center;
     margin: 20px;
-}
-
-.tokenContent input {
 }
 
 .block {
@@ -91,4 +90,34 @@
     background-color: #6bbdff;
     border-top-left-radius: 0.9em;
     border-top-right-radius: 0.9em;
+}
+
+.userDataForm{
+    flex-grow: 1;
+}
+
+.photo {
+    align-self: flex-start;
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.customFileUpload {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.mainPhoto {
+    max-width: 140px;
+    border-radius: 100%;
+    border: 1px solid gainsboro;
 }

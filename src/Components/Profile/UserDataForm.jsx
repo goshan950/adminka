@@ -3,16 +3,15 @@ import { Form, Input, Button, Select } from 'antd';
 
 const layout = {
     labelCol: {
-        span: 4,
+        span: 6,
     },
     wrapperCol: {
-        span: 14,
+        span: 16,
     },
 };
 const tailLayout = {
     wrapperCol: {
-        offset: 20,
-        span: 16,
+        offset: 24,
     },
 };
 
@@ -42,7 +41,7 @@ export const UserDataForm = () => {
                 label="Эл. почта"
                 name="email"
             >
-                <Input.Password />
+                <Input />
             </Form.Item>
 
             <Form.Item

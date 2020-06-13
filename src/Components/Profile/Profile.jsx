@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import s from './Profile.module.css';
 import {Button, Table, Input} from 'antd';
 import {UserDataForm} from "./UserDataForm";
+import userPhoto from './user.png'
+import {CameraOutlined} from '@ant-design/icons';
 
 const columns = [
     {
@@ -48,6 +50,12 @@ const data = [
     },
 ];
 
+const onMainPhotoSelected = (e) => {
+    if (e.target.files.length) {
+        console.log(e.target.files[0]);
+    }
+}
+
 class Profile extends Component {
     render() {
         return (
@@ -58,7 +66,16 @@ class Profile extends Component {
                             Аккаунт
                         </div>
                         <div className={s.profile}>
-                            <UserDataForm/>
+                            <div className={s.userDataForm}>
+                                <UserDataForm/>
+                            </div>
+                            <div className={s.photo}>
+                                <img src={userPhoto} className={s.mainPhoto}/>
+                                <label className={s.customFileUpload}>
+                                    <input type={"file"} onChange={onMainPhotoSelected}/>
+                                    <CameraOutlined />
+                                </label>
+                            </div>
                         </div>
                     </div>
                     <div className={s.token}>
