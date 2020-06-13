@@ -1,27 +1,27 @@
 {
   "files": {
-    "main.css": "/admin-panel/static/css/main.62bfa821.chunk.css",
-    "main.js": "/admin-panel/static/js/main.23cf0b19.chunk.js",
-    "main.js.map": "/admin-panel/static/js/main.23cf0b19.chunk.js.map",
+    "main.css": "/admin-panel/static/css/main.d2897cc9.chunk.css",
+    "main.js": "/admin-panel/static/js/main.b17e0a9c.chunk.js",
+    "main.js.map": "/admin-panel/static/js/main.b17e0a9c.chunk.js.map",
     "runtime-main.js": "/admin-panel/static/js/runtime-main.449e141b.js",
     "runtime-main.js.map": "/admin-panel/static/js/runtime-main.449e141b.js.map",
-    "static/css/2.bb49ca10.chunk.css": "/admin-panel/static/css/2.bb49ca10.chunk.css",
-    "static/js/2.345f81a9.chunk.js": "/admin-panel/static/js/2.345f81a9.chunk.js",
-    "static/js/2.345f81a9.chunk.js.map": "/admin-panel/static/js/2.345f81a9.chunk.js.map",
+    "static/css/2.3cbec162.chunk.css": "/admin-panel/static/css/2.3cbec162.chunk.css",
+    "static/js/2.9297672f.chunk.js": "/admin-panel/static/js/2.9297672f.chunk.js",
+    "static/js/2.9297672f.chunk.js.map": "/admin-panel/static/js/2.9297672f.chunk.js.map",
     "index.html": "/admin-panel/index.html",
-    "precache-manifest.17285aa2ed9f3d65f4b90d1db60a710b.js": "/admin-panel/precache-manifest.17285aa2ed9f3d65f4b90d1db60a710b.js",
+    "precache-manifest.7e5b62f1d505edca68a2a118e93dc445.js": "/admin-panel/precache-manifest.7e5b62f1d505edca68a2a118e93dc445.js",
     "service-worker.js": "/admin-panel/service-worker.js",
-    "static/css/2.bb49ca10.chunk.css.map": "/admin-panel/static/css/2.bb49ca10.chunk.css.map",
-    "static/css/main.62bfa821.chunk.css.map": "/admin-panel/static/css/main.62bfa821.chunk.css.map",
-    "static/js/2.345f81a9.chunk.js.LICENSE.txt": "/admin-panel/static/js/2.345f81a9.chunk.js.LICENSE.txt",
+    "static/css/2.3cbec162.chunk.css.map": "/admin-panel/static/css/2.3cbec162.chunk.css.map",
+    "static/css/main.d2897cc9.chunk.css.map": "/admin-panel/static/css/main.d2897cc9.chunk.css.map",
+    "static/js/2.9297672f.chunk.js.LICENSE.txt": "/admin-panel/static/js/2.9297672f.chunk.js.LICENSE.txt",
     "static/media/kopeechkaLogo.png": "/admin-panel/static/media/kopeechkaLogo.e8877b09.png",
-    "static/media/preloader.svg": "/admin-panel/static/media/preloader.6e7c9db7.svg"
+    "static/media/preloader.svg": "/admin-panel/static/media/preloader.6c3daf60.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.449e141b.js",
-    "static/css/2.bb49ca10.chunk.css",
-    "static/js/2.345f81a9.chunk.js",
-    "static/css/main.62bfa821.chunk.css",
-    "static/js/main.23cf0b19.chunk.js"
+    "static/css/2.3cbec162.chunk.css",
+    "static/js/2.9297672f.chunk.js",
+    "static/css/main.d2897cc9.chunk.css",
+    "static/js/main.b17e0a9c.chunk.js"
   ]
 }
