@@ -23,6 +23,11 @@
     border: solid 0 darkgrey;
     border-radius: 1em;
     overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile{
+    margin: 20px;
 }
 
 .tokenContent {
@@ -44,7 +49,6 @@
 .info {
     display: flex;
     flex-direction: column;
-    margin: 20px 0 0 0;
     height: 200px;
     align-items: center;
     background-color: white;

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import s from './Profile.module.css';
 import {Button, Table, Input} from 'antd';
+import {UserDataForm} from "./UserDataForm";
 
 const columns = [
     {
@@ -52,6 +53,14 @@ class Profile extends Component {
         return (
             <div className={s.container}>
                 <div className={s.block}>
+                    <div className={s.token}>
+                        <div className={s.blockTitle}>
+                            Аккаунт
+                        </div>
+                        <div className={s.profile}>
+                            <UserDataForm/>
+                        </div>
+                    </div>
                     <div className={s.token}>
                         <div className={s.blockTitle}>
                             API ключ
