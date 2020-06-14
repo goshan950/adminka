@@ -5,15 +5,14 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
 import Preloader from "./Components/common/Preloader/Preloader";
-import "antd/dist/antd.css";
 
 import Header from "./Components/Header/Header";
 import NavbarContainer from "./Components/Navbar/NavbarContainer";
 import Profile from "./Components/Profile/Profile";
 import Tokens from "./Components/Tokens/Tokens";
-import MyTable from "./Components/Table/MyTable";
 import Authorization from "./Components/Authorization/Authorization";
 import ApiGuide from "./Components/ApiGuide/ApiGuide";
+import SmsTable from "./Components/Table/SmsTable";
 
 class App extends Component {
     componentDidMount() {
@@ -40,7 +39,7 @@ class App extends Component {
                         <Route path='/profile'
                                render={() => <Profile/>}/>
                         <Route path='/table'
-                               render={() => <MyTable/>}/>
+                               render={() => <SmsTable/>}/>
                         <Route path='/tokens'
                                render={() => <Tokens/>}/>
                         <Route path='/api'

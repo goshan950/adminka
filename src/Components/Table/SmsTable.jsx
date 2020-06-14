@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "../Table/MyTable.module.css";
+import s from "./SmsTable.module.css";
 import { Table, Input, Button, Space } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
@@ -43,7 +43,7 @@ const data = [
     },
 ];
 
-class MyTable extends React.Component {
+class SmsTable extends React.Component {
     state = {
         searchText: '',
         searchedColumn: '',
@@ -187,4 +187,4 @@ class MyTable extends React.Component {
 }
 
 
-export default MyTable;
+export default SmsTable;
