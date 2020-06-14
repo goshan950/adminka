@@ -29,7 +29,7 @@ class Navbar extends React.Component {
     render() {
         return (
             <div className={s.wrapper}>
-                <Button onClick={this.toggleCollapsed} style={{marginBottom: 16, marginLeft: 20}}>
+                <Button onClick={this.toggleCollapsed} style={{marginBottom: 10, marginLeft: 20}}>
                     {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
                 </Button>
                 <Menu

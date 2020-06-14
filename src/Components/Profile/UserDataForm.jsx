@@ -31,7 +31,7 @@ export const UserDataForm = () => {
     return (
         <Form
             {...layout}
-            name="basic"
+            name="userData"
             initialValues={{
                 remember: true,
             }}
@@ -92,7 +92,7 @@ export const UserDataForm = () => {
             </Form.Item>
 
             <Form.Item {...tailLayout}>
-                <Button type="primary" style={{backgroundColor: '#40a9ff', border: 'none'}} htmlType="submit">
+                <Button htmlType="submit">
                     Сохранить
                 </Button>
             </Form.Item>
