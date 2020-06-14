@@ -92,7 +92,7 @@ export const UserDataForm = () => {
             </Form.Item>
 
             <Form.Item {...tailLayout}>
-                <Button type="primary" style={{backgroundColor: '#6bbdff', border: 'none'}} htmlType="submit">
+                <Button type="primary" style={{backgroundColor: '#40a9ff', border: 'none'}} htmlType="submit">
                     Сохранить
                 </Button>
             </Form.Item>

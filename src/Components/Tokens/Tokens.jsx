@@ -17,7 +17,7 @@ class Tokens extends Component {
                         <div className={s.token}>
                             <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>
                             <Badge count={<Button size="small">100р.</Button>} offset={[0, -5]}>
-                                <Badge count={<Button type='primary' style={{backgroundColor: '#91d5ff', border: 'none'}} size="small">+</Button>} offset={[0, 30]}>
+                                <Badge count={<Button style={{backgroundColor: '#e6f7ff'}} size="small">+</Button>} offset={[0, 30]}>
                                     <Input/>
                                 </Badge>
                             </Badge>
@@ -25,7 +25,7 @@ class Tokens extends Component {
                         <div className={s.token}>
                             <img src='https://smshub.org/assets/ico/logo.png' alt='#'/>
                             <Badge count={<Button size="small">550р.</Button>} offset={[0, -5]}>
-                                <Badge count={<Button type='primary' style={{backgroundColor: '#91d5ff', border: 'none'}} size="small">+</Button>} offset={[0, 30]}>
+                                <Badge count={<Button style={{backgroundColor: '#e6f7ff'}} size="small">+</Button>} offset={[0, 30]}>
                                     <Input/>
                                 </Badge>
                             </Badge>
@@ -33,7 +33,7 @@ class Tokens extends Component {
                         <div className={s.token}>
                             <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>
                             <Badge count={<Button size="small">10р.</Button>} offset={[0, -5]}>
-                                <Badge count={<Button type='primary' style={{backgroundColor: '#91d5ff', border: 'none'}} size="small">+</Button>} offset={[0, 30]}>
+                                <Badge count={<Button style={{backgroundColor: '#e6f7ff'}} size="small">+</Button>} offset={[0, 30]}>
                                     <Input/>
                                 </Badge>
                             </Badge>
@@ -41,7 +41,7 @@ class Tokens extends Component {
                         <div className={s.token}>
                             <img src='https://smshub.org/assets/ico/logo.png' alt='#'/>
                             <Badge count={<Button size="small">1000р.</Button>} offset={[0, -5]}>
-                                <Badge count={<Button type='primary' style={{backgroundColor: '#91d5ff', border: 'none'}} size="small">+</Button>} offset={[0, 30]}>
+                                <Badge count={<Button style={{backgroundColor: '#e6f7ff'}} size="small">+</Button>} offset={[0, 30]}>
                                     <Input/>
                                 </Badge>
                             </Badge>

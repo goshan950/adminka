@@ -103,7 +103,7 @@ class Profile extends Component {
                             Информация о подписке
                         </div>
                         <div className={s.infoContent}>
-                            <Progress type="circle" percent={75} format={percent => `${percent} Дней`} />
+                            <Progress percent={75} status="active" format={percent => `${percent} Дней`} />
                         </div>
                     </div>
                     <div className={s.token}>
