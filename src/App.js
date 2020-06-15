@@ -33,14 +33,14 @@ class App extends Component {
 
         return (
             <div className='app-wrapper'>
-                <Media queries={{ small: "(min-width: 993px)" }}>
+                <Media queries={{ small: "(min-width: 768px)" }}>
                     {matches => matches.small
                         ? <NavBarContainer/>
                         : <HeaderContainer/>
                     }
                 </Media>
                 <div className='content-wrapper'>
-                    <Media queries={{ small: "(min-width: 993px)" }}>
+                    <Media queries={{ small: "(min-width: 768px)" }}>
                         {matches => matches.small
                             ? <HeaderContainer/>
                             : <div className='nav-bar'>

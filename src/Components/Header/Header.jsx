@@ -71,11 +71,9 @@ class Header extends Component {
                     </span>
                     <img className={s.logo}
                          src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>
-
                     <div className={s.number}>
                         <Button block onClick={() => this.setModal1Visible(true)}>Получить номер</Button>
                     </div>
-
                     <Modal
                         style={{top: 20}}
                         okText={'Оплатить'}

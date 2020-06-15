@@ -9,7 +9,7 @@ import {toggleNavCollapsed} from "../../redux/app-reducer";
 class NavBarContainer extends React.Component {
     render() {
         return (
-            <Media queries={{small: "(min-width: 993px)"}}>
+            <Media queries={{small: "(min-width: 768px)"}}>
                 {matches => matches.small
                     ? <NavBar {...this.props} />
                     : <NavBarMobile {...this.props} />
