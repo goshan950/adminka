@@ -9,24 +9,34 @@ import {
     UserOutlined,
 } from '@ant-design/icons';
 
+import { useMediaQuery } from 'react-responsive'
 import {Menu} from 'antd';
 import {NavLink} from "react-router-dom";
 import s from "./NavBar.module.css";
 
-class NavBar extends React.Component {
-    render() {
-        return (
-            <div className={s.wrapper}>
-                <div className={this.props.navCollapsed ? s.collapsed : s.opened}>
+const NavBar = (props) => {
+
+    const handleMediaQueryChange = (matches) => {
+        matches ? props.toggleNavCollapsed(false) : props.toggleNavCollapsed(true)
+    }
+
+    const isDesktopOrLaptop = useMediaQuery(
+        {minWidth: 993}, undefined, handleMediaQueryChange
+    );
+
+    return (
+        <div className={s.wrapper}>
+            {isDesktopOrLaptop}
+            <div className={props.navCollapsed ? s.collapsed : s.opened}>
                 <div className={s.logoContainer}>
-                    {!this.props.navCollapsed && <img className={s.logo}
+                    {!props.navCollapsed && <img className={s.logo}
                                                       src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>}
                 </div>
                 <Menu
                     defaultSelectedKeys={['1']}
                     defaultOpenKeys={['sub1']}
                     mode="inline"
-                    inlineCollapsed={this.props.navCollapsed}
+                    inlineCollapsed={props.navCollapsed}
                     style={{marginTop: 20}}
                 >
 
@@ -56,14 +66,13 @@ class NavBar extends React.Component {
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="6" icon={<ImportOutlined style={{fontSize: '20px'}}/>}
-                               onClick={this.props.logout}>
+                               onClick={props.logout}>
                         Выход
                     </Menu.Item>
                 </Menu>
-                </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
 export default NavBar;

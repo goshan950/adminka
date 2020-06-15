@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
 
-import Media from 'react-media';
 import {Route, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
+import MediaQuery from 'react-responsive'
 
 import NavBarContainer from "./Components/Navbar/NavBarContainer";
 import Profile from "./Components/Profile/Profile";
@@ -33,21 +33,21 @@ class App extends Component {
 
         return (
             <div className='app-wrapper'>
-                <Media queries={{ small: "(min-width: 768px)" }}>
-                    {matches => matches.small
+                <MediaQuery minWidth={768}>
+                    {(matches) => matches
                         ? <NavBarContainer/>
                         : <HeaderContainer/>
                     }
-                </Media>
+                </MediaQuery>
                 <div className='content-wrapper'>
-                    <Media queries={{ small: "(min-width: 768px)" }}>
-                        {matches => matches.small
+                    <MediaQuery minWidth={768}>
+                        {(matches) => matches
                             ? <HeaderContainer/>
                             : <div className='nav-bar'>
                                 <NavBarContainer/>
                               </div>
                         }
-                    </Media>
+                    </MediaQuery>
                     <div className='content'>
                         <Route path='/profile'
                                render={() => <Profile/>}/>
