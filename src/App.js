@@ -7,7 +7,7 @@ import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
 
-import NavbarContainer from "./Components/Navbar/NavbarContainer";
+import NavBarContainer from "./Components/Navbar/NavBarContainer";
 import Profile from "./Components/Profile/Profile";
 import Tokens from "./Components/Tokens/Tokens";
 import Authorization from "./Components/Authorization/Authorization";
@@ -35,7 +35,7 @@ class App extends Component {
             <div className='app-wrapper'>
                 <Media queries={{ small: "(min-width: 993px)" }}>
                     {matches => matches.small
-                        ? <NavbarContainer/>
+                        ? <NavBarContainer/>
                         : <HeaderContainer/>
                     }
                 </Media>
@@ -43,8 +43,8 @@ class App extends Component {
                     <Media queries={{ small: "(min-width: 993px)" }}>
                         {matches => matches.small
                             ? <HeaderContainer/>
-                            : <div className='navbar'>
-                                <NavbarContainer/>
+                            : <div className='nav-bar'>
+                                <NavBarContainer/>
                               </div>
                         }
                     </Media>

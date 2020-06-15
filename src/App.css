@@ -5,14 +5,13 @@
 }
 
 .content-wrapper {
-  background-color: whitesmoke;
-  /*display: flex;*/
+  background-color: #f0f2f5;
   min-height: 100vh;
-
   width: 100%;
+  z-index: 9;
 }
 
-.navbar {
+.nav-bar {
 }
 
 .content {
@@ -28,7 +27,7 @@
     display: flex;
     flex-direction: column-reverse;
   }
-  .navbar {
+  .nav-bar {
     position: sticky;
     bottom: 0;
     z-index: 100;

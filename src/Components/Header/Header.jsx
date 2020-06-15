@@ -66,9 +66,9 @@ class Header extends Component {
         return (
             <header className={s.header}>
                 <div className={s.container}>
-                    <Button onClick={this.toggleCollapsed} style={{marginBottom: 10, marginLeft: 20}}>
+                    <span onClick={this.toggleCollapsed} className={s.collapseContainer}>
                         {React.createElement(this.props.navCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-                    </Button>
+                    </span>
                     <img className={s.logo}
                          src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>
 

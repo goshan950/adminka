@@ -10,9 +10,9 @@ import {
 } from '@ant-design/icons';
 
 import {NavLink} from "react-router-dom";
-import s from './NavbarMobile.module.css';
+import s from './NavBarMobile.module.css';
 
-class NavbarMobile extends React.Component {
+class NavBarMobile extends React.Component {
 
     render() {
         return (
@@ -40,4 +40,4 @@ class NavbarMobile extends React.Component {
     }
 }
 
-export default NavbarMobile;
+export default NavBarMobile;
