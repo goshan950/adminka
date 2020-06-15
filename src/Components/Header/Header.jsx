@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import s from './Header.module.css';
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
+import {DownOutlined, MenuFoldOutlined, MenuUnfoldOutlined, UserOutlined} from '@ant-design/icons';
 import {Avatar, Input} from 'antd';
 import {InputNumber} from 'antd';
 import { Menu, Modal, Button, Select, Dropdown } from 'antd';
@@ -58,12 +58,17 @@ class Header extends Component {
         this.setState({ modal1Visible });
     }
     //Modal number
+    toggleCollapsed = () => {
+        this.props.toggleNavCollapsed(!this.props.navCollapsed);
+    };
 
     render() {
         return (
             <header className={s.header}>
                 <div className={s.container}>
-
+                    <Button onClick={this.toggleCollapsed} style={{marginBottom: 10, marginLeft: 20}}>
+                        {React.createElement(this.props.navCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
+                    </Button>
                     <img className={s.logo}
                          src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>
 

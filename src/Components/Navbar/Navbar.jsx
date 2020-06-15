@@ -7,38 +7,25 @@ import {
     SolutionOutlined,
     TableOutlined,
     UserOutlined,
-    MenuUnfoldOutlined,
-    MenuFoldOutlined,
 } from '@ant-design/icons';
 
-import { Menu, Button } from 'antd';
+import { Menu} from 'antd';
 import {NavLink} from "react-router-dom";
 import s from "./Navbar.module.css";
 
 class Navbar extends React.Component {
-    state = {
-        collapsed: false,
-    };
-
-    toggleCollapsed = () => {
-        this.setState({
-            collapsed: !this.state.collapsed,
-        });
-    };
-
     render() {
         return (
             <div className={s.wrapper}>
-                <Button onClick={this.toggleCollapsed} style={{marginBottom: 10, marginLeft: 20}}>
-                    {React.createElement(this.state.collapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
-                </Button>
+                {!this.props.navCollapsed && <img className={s.logo}
+                                                  src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>}
                 <Menu
                     defaultSelectedKeys={['1']}
                     defaultOpenKeys={['sub1']}
                     mode="inline"
                     theme="light"
-                    inlineCollapsed={this.state.collapsed}
-
+                    inlineCollapsed={this.props.navCollapsed}
+                    style={{marginTop: 20}}
                 >
                     <Menu.Item key="1">
                         <NavLink to="/profile">
