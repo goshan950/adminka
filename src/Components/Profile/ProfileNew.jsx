@@ -17,7 +17,7 @@ const Profile = () => {
     return (
         <div className={s.container}>
             <div className={s.block}>
-                <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Аккаунт">
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Аккаунт">
                     <div className={s.profile}>
                         <div className={s.photo}>
                             <img src={userPhoto} className={s.mainPhoto}/>
@@ -29,23 +29,23 @@ const Profile = () => {
                         <UserDataForm/>
                     </div>
                 </Card>
-                <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Сменить Пароль">
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Сменить Пароль">
                     <ChangeEmailForm/>
                 </Card>
             </div>
 
             <div className={s.block2}>
-                <Card bodyStyle={{paddingBottom: 0}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="История оплаты">
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} bodyStyle={{paddingBottom: 0}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="История оплаты">
                     <HistoryTable/>
                 </Card>
-                <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Информация о подписке">
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Информация о подписке">
                     <Progress percent={75} style={{paddingRight: 24}} status="active" format={percent => `${percent} Дней`}/>
                 </Card>
-                <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Активировать Купон">
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Активировать Купон">
                     <Input/>
                     <Button className={s.button}>Активировать</Button>
                 </Card>
-                <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="API ключ">
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="API ключ">
                     <Input/>
                     <Button className={s.button}>Сгенерировать новый ключ</Button>
                 </Card>
