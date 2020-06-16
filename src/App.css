@@ -1,7 +1,7 @@
 .app-wrapper {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  display: flex; /*media*/
+  display: flex;
 }
 
 .content-wrapper {
@@ -9,9 +9,6 @@
   min-height: 100vh;
   width: 100%;
   z-index: 9;
-}
-
-.nav-bar {
 }
 
 .content {
@@ -23,15 +20,9 @@
   .app-wrapper{
     display: block;
   }
+
   .content-wrapper {
     display: flex;
     flex-direction: column-reverse;
-  }
-  .nav-bar {
-    position: sticky;
-    bottom: 0;
-    z-index: 100;
-  }
-  .content {
   }
 }

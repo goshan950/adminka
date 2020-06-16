@@ -5,7 +5,6 @@ import {Route, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
-import MediaQuery from 'react-responsive'
 
 import NavBarContainer from "./Components/Navbar/NavBarContainer";
 import Profile from "./Components/Profile/Profile";
@@ -15,6 +14,7 @@ import ApiGuide from "./Components/ApiGuide/ApiGuide";
 import SmsTable from "./Components/Table/SmsTable";
 import Preloader from "./Components/common/Preloader/Preloader";
 import HeaderContainer from "./Components/Header/HeaderContainer";
+import {DesktopOrLaptop, Mobile} from "./Components/common/MediaQueries/MediaQueries";
 
 class App extends Component {
     componentDidMount() {
@@ -33,21 +33,19 @@ class App extends Component {
 
         return (
             <div className='app-wrapper'>
-                <MediaQuery minWidth={768}>
-                    {(matches) => matches
-                        ? <NavBarContainer/>
-                        : <HeaderContainer/>
-                    }
-                </MediaQuery>
+                <DesktopOrLaptop>
+                    <NavBarContainer/>
+                </DesktopOrLaptop>
+                <Mobile>
+                    <HeaderContainer/>
+                </Mobile>
                 <div className='content-wrapper'>
-                    <MediaQuery minWidth={768}>
-                        {(matches) => matches
-                            ? <HeaderContainer/>
-                            : <div className='nav-bar'>
-                                <NavBarContainer/>
-                              </div>
-                        }
-                    </MediaQuery>
+                    <DesktopOrLaptop>
+                        <HeaderContainer/>
+                    </DesktopOrLaptop>
+                    <Mobile>
+                            <NavBarContainer/>
+                    </Mobile>
                     <div className='content'>
                         <Route path='/profile'
                                render={() => <Profile/>}/>

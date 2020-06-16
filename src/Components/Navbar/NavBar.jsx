@@ -30,7 +30,7 @@ const NavBar = (props) => {
             <div className={props.navCollapsed ? s.collapsed : s.opened}>
                 <div className={s.logoContainer}>
                     {!props.navCollapsed && <img className={s.logo}
-                                                      src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>}
+                                                 src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>}
                 </div>
                 <Menu
                     defaultSelectedKeys={['1']}
