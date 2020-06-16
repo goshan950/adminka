@@ -3,12 +3,12 @@ import { Form, Input, Button, Select } from 'antd';
 
 const layout = {
     labelCol: {
-        span: 6,
+        flex: '80px',
     },
+
     wrapperCol: {
-        span: 20,
+        flex: "auto",
     },
-    justify: 'start',
 };
 
 const tailLayout = {

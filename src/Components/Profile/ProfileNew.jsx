@@ -26,9 +26,7 @@ const Profile = () => {
                                 <CameraOutlined/>
                             </label>
                         </div>
-                        <div className={s.userDataForm}>
-                            <UserDataForm/>
-                        </div>
+                        <UserDataForm/>
                     </div>
                 </Card>
                 <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Сменить Пароль">
@@ -37,7 +35,7 @@ const Profile = () => {
             </div>
 
             <div className={s.block2}>
-                <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="История оплаты">
+                <Card bodyStyle={{paddingBottom: 0}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="История оплаты">
                     <HistoryTable/>
                 </Card>
                 <Card style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Информация о подписке">
