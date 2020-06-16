@@ -1,55 +1,10 @@
 import React, {Component} from 'react';
 import s from './Profile.module.css';
-import {Button, Table, Input, Progress} from 'antd';
-import {ChangeEmailForm} from "./ChangeEmailForm";
+import {Button, Table, Input, Progress, Card} from 'antd';
+import {ChangeEmailForm} from "./Forms/ChangeEmailForm";
 import userPhoto from '../../images/user.png'
 import {CameraOutlined} from '@ant-design/icons';
-import {UserDataForm} from "./UserDataForm";
-
-const columns = [
-    {
-        title: 'Дата',
-        dataIndex: 'date',
-        key: 'date'
-    },
-    {
-        title: 'Сумма',
-        dataIndex: 'money',
-        key: 'money'
-    },
-    {
-        title: 'Статус',
-        dataIndex: 'status',
-        key: 'status'
-    },
-];
-
-const data = [
-    {
-        key: '1',
-        date: '03.04.2020',
-        money: '150р',
-        status: 'Подтверждено'
-    },
-    {
-        key: '2',
-        date: '03.04.2020',
-        money: '150р',
-        status: 'Подтверждено'
-    },
-    {
-        key: '3',
-        date: '03.04.2020',
-        money: '150р',
-        status: 'Подтверждено'
-    },
-    {
-        key: '4',
-        date: '03.04.2020',
-        money: '150р',
-        status: 'Подтверждено'
-    },
-];
+import {UserDataForm} from "./Forms/UserDataForm";
 
 const onMainPhotoSelected = (e) => {
     if (e.target.files.length) {
@@ -96,7 +51,6 @@ class Profile extends Component {
                         <div className={s.tableTitle}>
                             История оплаты
                         </div>
-                        <Table size="middle" columns={columns} bordered={true} dataSource={data} />
                     </div>
                     <div className={s.token}>
                         <div className={s.blockTitle}>

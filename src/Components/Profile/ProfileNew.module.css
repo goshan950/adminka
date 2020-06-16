@@ -25,13 +25,6 @@
     margin-bottom: 20px;
 }
 
-.profile{
-    display: flex;
-    justify-content: space-between;
-    flex: 1 1 auto;
-    margin: 20px 20px 0 20px;
-}
-
 .tokenContent {
     display: flex;
     flex-direction: column;
@@ -41,6 +34,11 @@
 }
 
 .block {
+    max-width: 800px;
+    flex-grow: 1;
+}
+
+.block2 {
     max-width: 800px;
     flex-grow: 1;
 }
@@ -78,12 +76,6 @@
     margin-top: 10px;
 }
 
-.block2 {
-    margin: 0 10px 0 10px;
-    max-width: 800px;
-    flex-grow: 1;
-}
-
 .tableTitle {
     height: 40px;
     text-align: center;
@@ -99,18 +91,14 @@
 
 .userDataForm{
     flex-grow: 1;
-    flex-direction: column;
-    order: 1;
 }
 
 .photo {
     align-self: flex-start;
     position: relative;
     text-align: center;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     color: white;
-    order: 2;
 }
 
 input[type="file"] {
@@ -133,19 +121,6 @@ input[type="file"] {
 }
 
 @media (max-width: 992px) {
-    .profile {
-        flex-direction: column;
-    }
-    .userDataForm {
-        order: 2;
-    }
-    .photo {
-        order: 1;
-        align-self: center;
-    }
-}
-
-@media (max-width: 1200px) {
     .container {
         align-items: center;
     }

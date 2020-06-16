@@ -102,7 +102,7 @@ class Header extends Component {
                         </Select>
                     </Modal>
 
-                    <div className={s.balance}>
+                    <div className={s.userContainer}>
                         <Avatar shape="square" className={s.ava} size={48} icon={<UserOutlined />}/>
                         <Dropdown overlay={
                             <Menu>
@@ -113,9 +113,9 @@ class Header extends Component {
                                 </Menu.Item>
                             </Menu>
                         }>
-                            <Button>
+                            <span>
                                 100 руб. <DownOutlined />
-                            </Button>
+                            </span>
                         </Dropdown>
                     </div>
 

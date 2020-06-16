@@ -47,7 +47,7 @@ export const ChangeEmailForm = () => {
                 <Input placeholder={'Подтвердите Пароль'}/>
             </Form.Item>
 
-            <Form.Item {...tailLayout}>
+            <Form.Item style={{marginBottom: 0}} {...tailLayout}>
                 <Button htmlType="submit">
                      Сменить пароль
                 </Button>

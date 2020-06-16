@@ -31,10 +31,14 @@
     width: 300px;
 }
 
-.balance {
+.userContainer {
     display: flex;
     align-items: center;
     padding: 0 24px;
+}
+
+.userContainer span {
+    cursor: pointer;
 }
 
 .ava {

@@ -21,7 +21,7 @@ const NavBar = (props) => {
     }
 
     const isDesktopOrLaptop = useMediaQuery(
-        {minWidth: 993}, undefined, handleMediaQueryChange
+        {minWidth: 1240}, undefined, handleMediaQueryChange
     );
 
     return (
@@ -37,7 +37,7 @@ const NavBar = (props) => {
                     defaultOpenKeys={['sub1']}
                     mode="inline"
                     inlineCollapsed={props.navCollapsed}
-                    style={{marginTop: 20}}
+                    style={{marginTop: 24}}
                 >
 
                     <Menu.Item key="1" icon={<UserOutlined style={{fontSize: '20px'}}/>}>

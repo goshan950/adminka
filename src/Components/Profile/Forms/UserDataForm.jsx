@@ -3,11 +3,12 @@ import { Form, Input, Button, Select } from 'antd';
 
 const layout = {
     labelCol: {
-        span: 5,
+        span: 6,
     },
     wrapperCol: {
-        span: 19,
+        span: 20,
     },
+    justify: 'start',
 };
 
 const tailLayout = {
@@ -91,7 +92,7 @@ export const UserDataForm = () => {
                 </Select>
             </Form.Item>
 
-            <Form.Item {...tailLayout}>
+            <Form.Item style={{marginBottom: 0}} {...tailLayout}>
                 <Button htmlType="submit">
                     Сохранить
                 </Button>

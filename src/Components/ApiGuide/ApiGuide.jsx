@@ -34,7 +34,6 @@ class ApiGuide extends Component {
             <div className={s.container}>
                 <Card
                     style={{ width: '100%' }}
-                    title="API"
                     tabList={tabList}
                     activeTabKey={this.state.key}
                     onTabChange={key => {

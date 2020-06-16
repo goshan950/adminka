@@ -7,7 +7,6 @@ import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
 
 import NavBarContainer from "./Components/Navbar/NavBarContainer";
-import Profile from "./Components/Profile/Profile";
 import Tokens from "./Components/Tokens/Tokens";
 import Authorization from "./Components/Authorization/Authorization";
 import ApiGuide from "./Components/ApiGuide/ApiGuide";
@@ -15,6 +14,8 @@ import SmsTable from "./Components/Table/SmsTable";
 import Preloader from "./Components/common/Preloader/Preloader";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import {DesktopOrLaptop, Mobile} from "./Components/common/MediaQueries/MediaQueries";
+import ProfileNew from "./Components/Profile/ProfileNew";
+import Profile from "./Components/Profile/Profile";
 
 class App extends Component {
     componentDidMount() {
@@ -44,11 +45,11 @@ class App extends Component {
                         <HeaderContainer/>
                     </DesktopOrLaptop>
                     <Mobile>
-                            <NavBarContainer/>
+                        <NavBarContainer/>
                     </Mobile>
                     <div className='content'>
                         <Route path='/profile'
-                               render={() => <Profile/>}/>
+                               render={() => <ProfileNew/>}/>
                         <Route path='/table'
                                render={() => <SmsTable/>}/>
                         <Route path='/tokens'
