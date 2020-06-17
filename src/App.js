@@ -15,7 +15,6 @@ import Preloader from "./Components/common/Preloader/Preloader";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import {DesktopOrLaptop, Mobile} from "./Components/common/MediaQueries/MediaQueries";
 import ProfileNew from "./Components/Profile/ProfileNew";
-import Profile from "./Components/Profile/Profile";
 
 class App extends Component {
     componentDidMount() {

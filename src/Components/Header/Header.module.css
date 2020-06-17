@@ -36,6 +36,10 @@
     align-items: center;
     padding: 0 24px;
 }
+.balance {
+    display: flex;
+    align-items: center;
+}
 
 .userContainer span {
     cursor: pointer;
@@ -54,6 +58,7 @@
 @media (max-width: 767px) {
     .logo {
         display: block;
+        height: 25px;
     }
     .collapseContainer {
         display: none;

@@ -113,7 +113,7 @@ class Header extends Component {
                                 </Menu.Item>
                             </Menu>
                         }>
-                            <span>
+                            <span className={s.balance}>
                                 100 руб. <DownOutlined />
                             </span>
                         </Dropdown>

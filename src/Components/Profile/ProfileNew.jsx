@@ -18,16 +18,14 @@ const Profile = () => {
         <div className={s.container}>
             <div className={s.block}>
                 <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Аккаунт">
-                    <div className={s.profile}>
-                        <div className={s.photo}>
-                            <img src={userPhoto} className={s.mainPhoto}/>
-                            <label className={s.customFileUpload}>
-                                <input type={"file"} onChange={onMainPhotoSelected}/>
-                                <CameraOutlined/>
-                            </label>
-                        </div>
-                        <UserDataForm/>
+                    <div className={s.photo}>
+                        <img src={userPhoto} className={s.mainPhoto}/>
+                        <label className={s.customFileUpload}>
+                            <input type={"file"} onChange={onMainPhotoSelected}/>
+                            <CameraOutlined/>
+                        </label>
                     </div>
+                    <UserDataForm/>
                 </Card>
                 <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Сменить Пароль">
                     <ChangeEmailForm/>
