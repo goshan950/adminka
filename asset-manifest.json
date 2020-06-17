@@ -1,27 +1,28 @@
 {
   "files": {
-    "main.css": "/admin-panel/static/css/main.0a6da016.chunk.css",
-    "main.js": "/admin-panel/static/js/main.2c5af7dd.chunk.js",
-    "main.js.map": "/admin-panel/static/js/main.2c5af7dd.chunk.js.map",
+    "main.css": "/admin-panel/static/css/main.c5a862de.chunk.css",
+    "main.js": "/admin-panel/static/js/main.ad6fe6a2.chunk.js",
+    "main.js.map": "/admin-panel/static/js/main.ad6fe6a2.chunk.js.map",
     "runtime-main.js": "/admin-panel/static/js/runtime-main.449e141b.js",
     "runtime-main.js.map": "/admin-panel/static/js/runtime-main.449e141b.js.map",
     "static/css/2.4fa29a53.chunk.css": "/admin-panel/static/css/2.4fa29a53.chunk.css",
-    "static/js/2.8a2eac23.chunk.js": "/admin-panel/static/js/2.8a2eac23.chunk.js",
-    "static/js/2.8a2eac23.chunk.js.map": "/admin-panel/static/js/2.8a2eac23.chunk.js.map",
+    "static/js/2.9a779881.chunk.js": "/admin-panel/static/js/2.9a779881.chunk.js",
+    "static/js/2.9a779881.chunk.js.map": "/admin-panel/static/js/2.9a779881.chunk.js.map",
     "index.html": "/admin-panel/index.html",
-    "precache-manifest.1936d5aff2cb084067d0e7b42fa551bf.js": "/admin-panel/precache-manifest.1936d5aff2cb084067d0e7b42fa551bf.js",
+    "precache-manifest.59a65ecb45bc299078b3c1a20b58b3ec.js": "/admin-panel/precache-manifest.59a65ecb45bc299078b3c1a20b58b3ec.js",
     "service-worker.js": "/admin-panel/service-worker.js",
     "static/css/2.4fa29a53.chunk.css.map": "/admin-panel/static/css/2.4fa29a53.chunk.css.map",
-    "static/css/main.0a6da016.chunk.css.map": "/admin-panel/static/css/main.0a6da016.chunk.css.map",
-    "static/js/2.8a2eac23.chunk.js.LICENSE.txt": "/admin-panel/static/js/2.8a2eac23.chunk.js.LICENSE.txt",
+    "static/css/main.c5a862de.chunk.css.map": "/admin-panel/static/css/main.c5a862de.chunk.css.map",
+    "static/js/2.9a779881.chunk.js.LICENSE.txt": "/admin-panel/static/js/2.9a779881.chunk.js.LICENSE.txt",
     "static/media/kopeechkaLogo.png": "/admin-panel/static/media/kopeechkaLogo.e8877b09.png",
+    "static/media/logo_mini.png": "/admin-panel/static/media/logo_mini.5d27842e.png",
     "static/media/preloader.svg": "/admin-panel/static/media/preloader.6c3daf60.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.449e141b.js",
     "static/css/2.4fa29a53.chunk.css",
-    "static/js/2.8a2eac23.chunk.js",
-    "static/css/main.0a6da016.chunk.css",
-    "static/js/main.2c5af7dd.chunk.js"
+    "static/js/2.9a779881.chunk.js",
+    "static/css/main.c5a862de.chunk.css",
+    "static/js/main.ad6fe6a2.chunk.js"
   ]
 }
