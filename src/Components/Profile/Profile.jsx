@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import s from './Profile.module.css';
-import {Button, Table, Input, Progress, Card} from 'antd';
+import {Button, Input, Progress, Card} from 'antd';
 import {ChangeEmailForm} from "./Forms/ChangeEmailForm";
 import userPhoto from '../../images/user.png'
 import {CameraOutlined} from '@ant-design/icons';
 import {UserDataForm} from "./Forms/UserDataForm";
+import {HistoryTable} from "./HistoryTable";
 
 const onMainPhotoSelected = (e) => {
     if (e.target.files.length) {
@@ -12,76 +13,43 @@ const onMainPhotoSelected = (e) => {
     }
 }
 
-class Profile extends Component {
-    render() {
-        return (
-            <div className={s.container}>
-                <div className={s.block}>
-                    <div className={s.token}>
-                        <div className={s.blockTitle}>
-                            Аккаунт
-                        </div>
-                        <div className={s.profile}>
-                            <div className={s.userDataForm}>
-                                <UserDataForm/>
-                            </div>
-                            <div className={s.photo}>
-                                <img src={userPhoto} className={s.mainPhoto}/>
-                                <label className={s.customFileUpload}>
-                                    <input type={"file"} onChange={onMainPhotoSelected}/>
-                                    <CameraOutlined />
-                                </label>
-                            </div>
-                        </div>
+const Profile = () => {
+    return (
+        <div className={s.container}>
+            <div className={s.block}>
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{ overflow: 'auto', margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Аккаунт">
+                    <div className={s.photo}>
+                        <img src={userPhoto} className={s.mainPhoto}/>
+                        <label className={s.customFileUpload}>
+                            <input type={"file"} onChange={onMainPhotoSelected}/>
+                            <CameraOutlined/>
+                        </label>
                     </div>
-                    <div className={s.token}>
-                        <div className={s.blockTitle}>
-                            Сменить Пароль
-                        </div>
-                        <div className={s.profile}>
-                            <div className={s.userDataForm}>
-                                <ChangeEmailForm/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className={s.block2}>
-                    <div className={s.table}>
-                        <div className={s.tableTitle}>
-                            История оплаты
-                        </div>
-                    </div>
-                    <div className={s.token}>
-                        <div className={s.blockTitle}>
-                            Информация о подписке
-                        </div>
-                        <div className={s.infoContent}>
-                            <Progress percent={75} status="active" format={percent => `${percent} Дней`} />
-                        </div>
-                    </div>
-                    <div className={s.token}>
-                        <div className={s.blockTitle}>
-                            Активировать Купон
-                        </div>
-                        <div className={s.tokenContent}>
-                            <Input/>
-                            <Button className={s.button}>Активировать</Button>
-                        </div>
-                    </div>
-                    <div className={s.token}>
-                        <div className={s.blockTitle}>
-                            API ключ
-                        </div>
-                        <div className={s.tokenContent}>
-                            <Input/>
-                            <Button className={s.button}>Сгенерировать новый ключ</Button>
-                        </div>
-                    </div>
-                </div>
+                    <UserDataForm/>
+                </Card>
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{ overflow: 'auto', margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Сменить Пароль">
+                    <ChangeEmailForm/>
+                </Card>
             </div>
-        );
-    }
+
+            <div className={s.block2}>
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} bodyStyle={{paddingBottom: 0}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="История оплаты">
+                    <HistoryTable/>
+                </Card>
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Информация о подписке">
+                    <Progress percent={75} style={{paddingRight: 24}} status="active" format={percent => `${percent} Дней`}/>
+                </Card>
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Активировать Купон">
+                    <Input/>
+                    <Button className={s.button}>Активировать</Button>
+                </Card>
+                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="API ключ">
+                    <Input/>
+                    <Button className={s.button}>Сгенерировать новый ключ</Button>
+                </Card>
+            </div>
+        </div>
+    );
 }
 
 export default Profile;

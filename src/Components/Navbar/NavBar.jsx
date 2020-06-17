@@ -13,6 +13,7 @@ import { useMediaQuery } from 'react-responsive'
 import {Menu} from 'antd';
 import {NavLink} from "react-router-dom";
 import s from "./NavBar.module.css";
+import logoMini from "../../images/logo_mini.png";
 
 const NavBar = (props) => {
 
@@ -29,6 +30,7 @@ const NavBar = (props) => {
             {isDesktopOrLaptop}
             <div className={props.navCollapsed ? s.collapsed : s.opened}>
                 <div className={s.logoContainer}>
+                    <img src={logoMini} className={s.logoMini} alt="#"/>
                     {!props.navCollapsed && <img className={s.logo}
                                                  src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>}
                 </div>

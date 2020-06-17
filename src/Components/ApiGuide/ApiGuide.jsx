@@ -31,9 +31,8 @@ class ApiGuide extends Component {
 
     render() {
         return (
-            <div className={s.container}>
                 <Card
-                    style={{ width: '100%' }}
+                    style={{ margin: '0 12px 24px 12px' }}
                     tabList={tabList}
                     activeTabKey={this.state.key}
                     onTabChange={key => {
@@ -42,7 +41,6 @@ class ApiGuide extends Component {
                 >
                     {contentList[this.state.key]}
                 </Card>
-            </div>
         );
     }
 }

@@ -25,13 +25,6 @@
     margin-bottom: 20px;
 }
 
-.profile{
-    display: flex;
-    justify-content: space-between;
-    flex: 1 1 auto;
-    margin: 20px 20px 0 20px;
-}
-
 .tokenContent {
     display: flex;
     flex-direction: column;
@@ -43,18 +36,13 @@
 .block {
     max-width: 800px;
     flex-grow: 1;
+    overflow: auto;
 }
 
-.info {
-    display: flex;
-    flex-direction: column;
-    height: 200px;
-    align-items: center;
-    background-color: white;
-    box-shadow: 5px 5px 5px 0 #DBDBDB;
-    border: solid 0 darkgrey;
-    border-radius: 5px;
-    overflow: hidden;
+.block2 {
+    max-width: 800px;
+    flex-grow: 1;
+    overflow: auto;
 }
 
 .table {
@@ -66,51 +54,16 @@
     align-self: flex-start;
 }
 
-.infoContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px 40px 20px 20px;
-}
-
 .button {
     margin-top: 10px;
-}
-
-.block2 {
-    margin: 0 10px 0 10px;
-    max-width: 800px;
-    flex-grow: 1;
-}
-
-.tableTitle {
-    height: 40px;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #f8f9fa;
-    font-size: 18px;
-    background-color: #69c0ff;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.userDataForm{
-    flex-grow: 1;
-    flex-direction: column;
-    order: 1;
 }
 
 .photo {
     align-self: flex-start;
     position: relative;
     text-align: center;
-    margin-left: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
     color: white;
-    order: 2;
 }
 
 input[type="file"] {
@@ -133,19 +86,6 @@ input[type="file"] {
 }
 
 @media (max-width: 992px) {
-    .profile {
-        flex-direction: column;
-    }
-    .userDataForm {
-        order: 2;
-    }
-    .photo {
-        order: 1;
-        align-self: center;
-    }
-}
-
-@media (max-width: 1200px) {
     .container {
         align-items: center;
     }

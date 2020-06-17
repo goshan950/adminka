@@ -7,7 +7,7 @@ class Tokens extends Component {
         return (
             <div className={s.container}>
                 <div className={s.block}>
-                    <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: 12, border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Токены">
+                    <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Токены">
                         <div className={s.content}>
                             <div className={s.token}>
                                 <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>

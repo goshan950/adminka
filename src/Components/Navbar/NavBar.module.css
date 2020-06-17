@@ -1,9 +1,15 @@
 .logoContainer {
     height: 50px;
+    display: flex;
 }
 
 .logo {
     max-width: 160px;
+}
+
+.logoMini {
+    height: 40px;
+    margin: 0 12px 0 20px;
 }
 
 .wrapper {

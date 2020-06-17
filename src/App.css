@@ -12,13 +12,17 @@
 }
 
 .content {
-  padding: 12px;
-  width: 100%;
+  padding: 24px 12px 0 12px;
+  flex-grow: 1;
 }
 
 @media (max-width: 767px) {
   .app-wrapper{
     display: block;
+  }
+
+  .content {
+    padding: 12px 0 0 0;
   }
 
   .content-wrapper {
