@@ -41,11 +41,11 @@ const Profile = () => {
                 </Card>
                 <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Активировать Купон">
                     <Input/>
-                    <Button className={s.button}>Активировать</Button>
+                    <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} className={s.button}>Активировать</Button>
                 </Card>
                 <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="API ключ">
                     <Input/>
-                    <Button className={s.button}>Сгенерировать новый ключ</Button>
+                    <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} className={s.button}>Сгенерировать новый ключ</Button>
                 </Card>
             </div>
         </div>

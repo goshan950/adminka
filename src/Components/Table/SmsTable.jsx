@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, Input, Button, Space } from 'antd';
+import {Table, Input, Button, Space, Card} from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 
@@ -177,7 +177,9 @@ class SmsTable extends React.Component {
         ];
 
         return (
-                <Table style={{backgroundColor: "white", boxShadow: '0 1px 4px rgba(0,21,41,.08)', margin: '0 12px 24px 12px'}} scroll={{ x: 'max-content' }} bordered={true}
+                <Table style={{backgroundColor: "white", boxShadow: '0 1px 4px rgba(0,21,41,.08)', margin: '0 12px 24px 12px'}}
+                       scroll={{ x: 'max-content' }}
+                       bordered={true}
                        columns={columns} dataSource={data}/>
         )
     }

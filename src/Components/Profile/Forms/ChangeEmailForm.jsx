@@ -48,7 +48,7 @@ export const ChangeEmailForm = () => {
             </Form.Item>
 
             <Form.Item style={{marginBottom: 0}} {...tailLayout}>
-                <Button htmlType="submit">
+                <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} htmlType="submit">
                      Сменить пароль
                 </Button>
             </Form.Item>

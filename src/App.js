@@ -34,7 +34,9 @@ class App extends Component {
         return (
             <div className='app-wrapper'>
                 <DesktopOrLaptop>
-                    <NavBarContainer/>
+                    <div className='nav-wrapper'>
+                        <NavBarContainer/>
+                    </div>
                 </DesktopOrLaptop>
                 <Mobile>
                     <HeaderContainer/>
