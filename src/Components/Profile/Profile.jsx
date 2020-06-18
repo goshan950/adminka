@@ -1,11 +1,12 @@
 import React from 'react';
 import s from './Profile.module.css';
-import {Button, Input, Progress, Card} from 'antd';
+import {Button, Input, Progress} from 'antd';
 import {ChangeEmailForm} from "./Forms/ChangeEmailForm";
 import userPhoto from '../../images/user.png'
 import {CameraOutlined} from '@ant-design/icons';
 import {UserDataForm} from "./Forms/UserDataForm";
 import {HistoryTable} from "./HistoryTable";
+import {CustomCard} from "../common/Blocks/CustomCard";
 
 const onMainPhotoSelected = (e) => {
     if (e.target.files.length) {
@@ -17,36 +18,36 @@ const Profile = () => {
     return (
         <div className={s.container}>
             <div className={s.block}>
-                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{ overflow: 'auto', margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Аккаунт">
+                <CustomCard title='Аккаунт'>
                     <div className={s.photo}>
-                        <img src={userPhoto} className={s.mainPhoto}/>
+                        <img src={userPhoto} alt='#' className={s.mainPhoto}/>
                         <label className={s.customFileUpload}>
                             <input type={"file"} onChange={onMainPhotoSelected}/>
                             <CameraOutlined/>
                         </label>
                     </div>
                     <UserDataForm/>
-                </Card>
-                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{ overflow: 'auto', margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Сменить Пароль">
+                </CustomCard>
+                <CustomCard title="Сменить Пароль">
                     <ChangeEmailForm/>
-                </Card>
+                </CustomCard>
             </div>
 
             <div className={s.block2}>
-                <Card headStyle={{backgroundColor: '#F9F9F9'}} bodyStyle={{paddingBottom: 0}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="История оплаты">
+                <CustomCard bodyStyle={{paddingBottom: 0}} title="История оплаты">
                     <HistoryTable/>
-                </Card>
-                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Информация о подписке">
+                </CustomCard>
+                <CustomCard title="Информация о подписке">
                     <Progress percent={75} style={{paddingRight: 24}} status="active" format={percent => `${percent} Дней`}/>
-                </Card>
-                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Активировать Купон">
+                </CustomCard>
+                <CustomCard title="Активировать Купон">
                     <Input/>
                     <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} className={s.button}>Активировать</Button>
-                </Card>
-                <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="API ключ">
+                </CustomCard>
+                <CustomCard title="API ключ">
                     <Input/>
                     <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} className={s.button}>Сгенерировать новый ключ</Button>
-                </Card>
+                </CustomCard>
             </div>
         </div>
     );
