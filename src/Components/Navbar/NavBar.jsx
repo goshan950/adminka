@@ -47,27 +47,22 @@ const NavBar = (props) => {
                             Личный кабинет
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<PlusOutlined style={{fontSize: '20px'}}/>}>
-                        <NavLink to="/number">
-                            Получить номер
-                        </NavLink>
-                    </Menu.Item>
-                    <Menu.Item key="3" icon={<TableOutlined style={{fontSize: '20px'}}/>}>
+                    <Menu.Item key="2" icon={<TableOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/table">
                             Таблица заказов
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="4" icon={<DollarOutlined style={{fontSize: '20px'}}/>}>
+                    <Menu.Item key="3" icon={<DollarOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/tokens">
                             Токены
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="5" icon={<SolutionOutlined style={{fontSize: '20px'}}/>}>
+                    <Menu.Item key="4" icon={<SolutionOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/api">
                             API
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="6" icon={<ImportOutlined style={{fontSize: '20px'}}/>}
+                    <Menu.Item key="5" icon={<ImportOutlined style={{fontSize: '20px'}}/>}
                                onClick={props.logout}>
                         Выход
                     </Menu.Item>

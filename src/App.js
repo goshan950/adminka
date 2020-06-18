@@ -15,6 +15,7 @@ import Preloader from "./Components/common/Preloader/Preloader";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import {DesktopOrLaptop, Mobile} from "./Components/common/MediaQueries/MediaQueries";
 import Profile from "./Components/Profile/Profile";
+import Number from "./Components/Number/Number";
 
 class App extends Component {
     componentDidMount() {
@@ -34,9 +35,7 @@ class App extends Component {
         return (
             <div className='app-wrapper'>
                 <DesktopOrLaptop>
-                    <div className='nav-wrapper'>
-                        <NavBarContainer/>
-                    </div>
+                    <NavBarContainer/>
                 </DesktopOrLaptop>
                 <Mobile>
                     <HeaderContainer/>
@@ -57,6 +56,8 @@ class App extends Component {
                                render={() => <Tokens/>}/>
                         <Route path='/api'
                                render={() => <ApiGuide/>}/>
+                        <Route path='/number'
+                               render={() => <Number/>}/>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Table, Input, Button, Space, Card} from 'antd';
+import {Table, Input, Button, Space} from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 import Highlighter from 'react-highlight-words';
 
