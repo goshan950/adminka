@@ -1,12 +1,13 @@
 import React from 'react';
 import s from './Profile.module.css';
-import {Button, Input, Progress} from 'antd';
+import {Input, Progress} from 'antd';
 import {ChangeEmailForm} from "./Forms/ChangeEmailForm";
 import userPhoto from '../../images/user.png'
 import {CameraOutlined} from '@ant-design/icons';
 import {UserDataForm} from "./Forms/UserDataForm";
 import {HistoryTable} from "./HistoryTable";
-import {CustomCard} from "../common/Blocks/CustomCard";
+import {BaseCard} from "../common/Blocks/CustomCards";
+import {LightButton} from "../common/Buttons/CustomButtons";
 
 const onMainPhotoSelected = (e) => {
     if (e.target.files.length) {
@@ -18,7 +19,7 @@ const Profile = () => {
     return (
         <div className={s.container}>
             <div className={s.block}>
-                <CustomCard title='Аккаунт'>
+                <BaseCard title='Аккаунт'>
                     <div className={s.photo}>
                         <img src={userPhoto} alt='#' className={s.mainPhoto}/>
                         <label className={s.customFileUpload}>
@@ -27,27 +28,27 @@ const Profile = () => {
                         </label>
                     </div>
                     <UserDataForm/>
-                </CustomCard>
-                <CustomCard title="Сменить Пароль">
+                </BaseCard>
+                <BaseCard title="Сменить Пароль">
                     <ChangeEmailForm/>
-                </CustomCard>
+                </BaseCard>
             </div>
 
             <div className={s.block2}>
-                <CustomCard bodyStyle={{paddingBottom: 0}} title="История оплаты">
+                <BaseCard bodyStyle={{paddingBottom: 0}} title="История оплаты">
                     <HistoryTable/>
-                </CustomCard>
-                <CustomCard title="Информация о подписке">
+                </BaseCard>
+                <BaseCard title="Информация о подписке">
                     <Progress percent={75} style={{paddingRight: 24}} status="active" format={percent => `${percent} Дней`}/>
-                </CustomCard>
-                <CustomCard title="Активировать Купон">
+                </BaseCard>
+                <BaseCard title="Активировать Купон">
                     <Input/>
-                    <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} className={s.button}>Активировать</Button>
-                </CustomCard>
-                <CustomCard title="API ключ">
+                    <LightButton styles={{marginTop: 12, float: 'right'}}>Активировать</LightButton>
+                </BaseCard>
+                <BaseCard title="API ключ">
                     <Input/>
-                    <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} className={s.button}>Сгенерировать новый ключ</Button>
-                </CustomCard>
+                    <LightButton styles={{marginTop: 12, float: 'right'}}>Сгенерировать новый ключ</LightButton>
+                </BaseCard>
             </div>
         </div>
     );

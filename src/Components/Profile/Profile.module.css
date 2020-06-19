@@ -54,11 +54,6 @@
     align-self: flex-start;
 }
 
-.button {
-    margin-top: 12px;
-    float: right;
-}
-
 .photo {
     align-self: flex-start;
     position: relative;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Form, Input, Button } from 'antd';
+import {LightButton} from "../../common/Buttons/CustomButtons";
 
 const layout = {
     wrapperCol: {
@@ -48,9 +49,9 @@ export const ChangeEmailForm = () => {
             </Form.Item>
 
             <Form.Item style={{marginBottom: 0}} {...tailLayout}>
-                <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} htmlType="submit">
+                <LightButton htmlType="submit">
                      Сменить пароль
-                </Button>
+                </LightButton>
             </Form.Item>
         </Form>
     );

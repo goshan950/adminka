@@ -1,5 +1,6 @@
 import React from 'react';
 import {Form, Input, Button, Select} from 'antd';
+import {LightButton} from "../common/Buttons/CustomButtons";
 
 const { Option } = Select;
 
@@ -47,9 +48,9 @@ export const NumberForm = () => {
             </Form.Item>
 
             <Form.Item style={{marginBottom: 0}} {...tailLayout}>
-                <Button type={"primary"} style={{backgroundColor: "#40a9ff", border: 'none'}} htmlType="submit">
+                <LightButton htmlType="submit">
                      Оплатить
-                </Button>
+                </LightButton>
             </Form.Item>
         </Form>
     );

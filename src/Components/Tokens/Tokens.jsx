@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
 import s from './Tokens.module.css';
 import {Badge, Input, Button, Card} from "antd";
+import {BaseCard} from "../common/Blocks/CustomCards";
 
 class Tokens extends Component {
     render() {
         return (
             <div className={s.container}>
                 <div className={s.block}>
-                    <Card headStyle={{backgroundColor: '#F9F9F9'}} style={{margin: '0 12px 24px 12px', border: "none", boxShadow: "0 1px 4px rgba(0,21,41,.08)"}} title="Токены">
+                    <BaseCard title="Токены">
                         <div className={s.content}>
                             <div className={s.token}>
                                 <img src='https://sms-activate.ru/assets/img/logoBlack.png?1' alt='#'/>
@@ -46,7 +47,7 @@ class Tokens extends Component {
                                 </Badge>
                             </div>
                         </div>
-                    </Card>
+                    </BaseCard>
                 </div>
             </div>
         );
