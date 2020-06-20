@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 
-import {Route, withRouter} from "react-router-dom";
+import {Redirect, Route, withRouter, Switch} from "react-router-dom";
 import {connect} from "react-redux";
 import {compose} from "redux";
 import {initializeApp} from "./redux/app-reducer";
@@ -48,16 +48,22 @@ class App extends Component {
                         <NavBarContainer/>
                     </Mobile>
                     <div className='content'>
-                        <Route path='/profile'
-                               render={() => <Profile/>}/>
-                        <Route path='/table'
-                               render={() => <SmsTable/>}/>
-                        <Route path='/tokens'
-                               render={() => <Tokens/>}/>
-                        <Route path='/api'
-                               render={() => <ApiGuide/>}/>
-                        <Route path='/number'
-                               render={() => <Number/>}/>
+                        <Switch>
+                            <Route exact path='/'
+                                   render={() => <Redirect to={"/profile"}/>}/>
+                            <Route path='/profile'
+                                   render={() => <Profile/>}/>
+                            <Route path='/table'
+                                   render={() => <SmsTable/>}/>
+                            <Route path='/tokens'
+                                   render={() => <Tokens/>}/>
+                            <Route path='/api'
+                                   render={() => <ApiGuide/>}/>
+                            <Route path='/number'
+                                   render={() => <Number/>}/>
+                            <Route path='*'
+                                   render={() => <div>404 NOT FOUND</div>}/>
+                        </Switch>
                     </div>
                 </div>
             </div>
