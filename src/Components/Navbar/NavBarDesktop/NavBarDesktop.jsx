@@ -3,7 +3,6 @@ import React from 'react';
 import {
     DollarOutlined,
     ImportOutlined,
-    PlusOutlined,
     SolutionOutlined,
     TableOutlined,
     UserOutlined,
@@ -12,10 +11,10 @@ import {
 import { useMediaQuery } from 'react-responsive'
 import {Menu} from 'antd';
 import {NavLink} from "react-router-dom";
-import s from "./NavBar.module.css";
-import logoMini from "../../images/logo_mini.png";
+import s from "./NavBarDesktop.module.css";
+import logoMini from "../../../images/logo_mini.png";
 
-const NavBar = (props) => {
+const NavBarDesktop = (props) => {
 
     const handleMediaQueryChange = (matches) => {
         matches ? props.toggleNavCollapsed(false) : props.toggleNavCollapsed(true)
@@ -35,29 +34,28 @@ const NavBar = (props) => {
                                                  src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>}
                 </div>
                 <Menu
-                    defaultSelectedKeys={['1']}
-                    defaultOpenKeys={['sub1']}
+                    selectedKeys={[props.location.pathname]}
                     mode="inline"
                     inlineCollapsed={props.navCollapsed}
                     style={{marginTop: 24}}
                 >
 
-                    <Menu.Item key="1" icon={<UserOutlined style={{fontSize: '20px'}}/>}>
+                    <Menu.Item key="/profile" icon={<UserOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/profile">
                             Личный кабинет
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="2" icon={<TableOutlined style={{fontSize: '20px'}}/>}>
+                    <Menu.Item key="/table" icon={<TableOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/table">
                             Таблица заказов
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="3" icon={<DollarOutlined style={{fontSize: '20px'}}/>}>
+                    <Menu.Item key="/tokens" icon={<DollarOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/tokens">
                             Токены
                         </NavLink>
                     </Menu.Item>
-                    <Menu.Item key="4" icon={<SolutionOutlined style={{fontSize: '20px'}}/>}>
+                    <Menu.Item key="/api" icon={<SolutionOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/api">
                             API
                         </NavLink>
@@ -72,4 +70,4 @@ const NavBar = (props) => {
     );
 }
 
-export default NavBar;
+export default NavBarDesktop;
