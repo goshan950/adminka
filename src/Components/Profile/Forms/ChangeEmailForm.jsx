@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button } from 'antd';
+import { Form, Input} from 'antd';
 import {LightButton} from "../../common/Buttons/CustomButtons";
 
 const layout = {

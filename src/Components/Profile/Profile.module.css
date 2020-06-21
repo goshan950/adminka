@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    flex-grow: 1;
 }
 
 .block {
@@ -38,9 +37,6 @@ input[type="file"] {
 }
 
 @media (max-width: 992px) {
-    .container {
-        align-items: center;
-    }
     .block {
         width: 100%;
         max-width: 700px;
