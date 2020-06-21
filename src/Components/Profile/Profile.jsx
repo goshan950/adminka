@@ -20,8 +20,8 @@ const Profile = () => {
         <div className={s.container}>
             <div className={s.block}>
                 <BaseCard title='Аккаунт'>
-                    <div className={s.photo}>
-                        <img src={userPhoto} alt='#' className={s.mainPhoto}/>
+                    <div className={s.photoContainer}>
+                        <img src={userPhoto} alt='#' className={s.userPhoto}/>
                         <label className={s.customFileUpload}>
                             <input type={"file"} onChange={onMainPhotoSelected}/>
                             <CameraOutlined/>
@@ -34,7 +34,7 @@ const Profile = () => {
                 </BaseCard>
             </div>
 
-            <div className={s.block2}>
+            <div className={s.block}>
                 <BaseCard bodyStyle={{paddingBottom: 0}} title="История оплаты">
                     <HistoryTable/>
                 </BaseCard>
