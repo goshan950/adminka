@@ -10,12 +10,14 @@ import NavBarContainer from "./Components/Navbar/NavBarContainer";
 import Tokens from "./Components/Tokens/Tokens";
 import Authorization from "./Components/Authorization/Authorization";
 import ApiGuide from "./Components/ApiGuide/ApiGuide";
-import SmsTable from "./Components/Table/SmsTable";
 import Preloader from "./Components/common/Preloader/Preloader";
 import HeaderContainer from "./Components/Header/HeaderContainer";
 import {DesktopOrLaptop, Mobile} from "./Components/common/MediaQueries/MediaQueries";
 import Profile from "./Components/Profile/Profile";
 import Number from "./Components/Number/Number";
+import {withSuspense} from "./hoc/withSuspense";
+
+const SmsTable = React.lazy(() => import('./Components/Table/SmsTable'));
 
 class App extends Component {
     componentDidMount() {
@@ -54,7 +56,7 @@ class App extends Component {
                             <Route path='/profile'
                                    render={() => <Profile/>}/>
                             <Route path='/table'
-                                   render={() => <SmsTable/>}/>
+                                   render={withSuspense(SmsTable)}/>
                             <Route path='/tokens'
                                    render={() => <Tokens/>}/>
                             <Route path='/api'
