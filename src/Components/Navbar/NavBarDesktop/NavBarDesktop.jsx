@@ -15,11 +15,9 @@ import s from "./NavBarDesktop.module.css";
 import logoMini from "../../../images/logo_mini.png";
 
 const NavBarDesktop = (props) => {
-
     const handleMediaQueryChange = (matches) => {
         matches ? props.toggleNavCollapsed(false) : props.toggleNavCollapsed(true)
     }
-
     const isDesktopOrLaptop = useMediaQuery(
         {minWidth: 1240}, undefined, handleMediaQueryChange
     );
@@ -37,9 +35,7 @@ const NavBarDesktop = (props) => {
                     selectedKeys={[props.location.pathname]}
                     mode="inline"
                     inlineCollapsed={props.navCollapsed}
-                    style={{marginTop: 24}}
-                >
-
+                    style={{marginTop: 24}}>
                     <Menu.Item key="/profile" icon={<UserOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/profile">
                             Личный кабинет

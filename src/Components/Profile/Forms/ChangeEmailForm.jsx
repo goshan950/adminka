@@ -29,25 +29,15 @@ export const ChangeEmailForm = () => {
         <Form
             {...layout}
             name="basic"
-            initialValues={{
-                remember: true,
-            }}
+            initialValues={{remember: true}}
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-        >
-
-            <Form.Item
-                name="newPas"
-            >
+            onFinishFailed={onFinishFailed}>
+            <Form.Item name="newPas">
                 <Input placeholder={'Новый Пароль'}/>
             </Form.Item>
-
-            <Form.Item
-                name="newPas2"
-            >
+            <Form.Item name="newPas2">
                 <Input placeholder={'Подтвердите Пароль'}/>
             </Form.Item>
-
             <Form.Item style={{marginBottom: 0}} {...tailLayout}>
                 <LightButton htmlType="submit">
                      Сменить пароль

@@ -8,17 +8,14 @@ import {toggleNavCollapsed} from "../../redux/app-reducer";
 import {compose} from "redux";
 import {withRouter} from "react-router-dom";
 
-class NavBarContainer extends React.Component {
-    render() {
-        return (
-            <MediaQuery minWidth={768}>
-                {(matches) => matches
-                    ? <NavBarDesktop {...this.props} />
-                    : <NavBarMobile {...this.props} />
-                }
-            </MediaQuery>
-        )
-    }
+const NavBarContainer = (props) => {
+    return (
+        <MediaQuery minWidth={768}>
+            {(matches) => matches
+                ? <NavBarDesktop {...props} />
+                : <NavBarMobile logout={props.logout}/>}
+        </MediaQuery>
+    )
 }
 
 const mapStateToProps = (state) => ({

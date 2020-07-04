@@ -1,5 +1,5 @@
 import React from 'react';
-import { Form, Input, Button, Select } from 'antd';
+import {Form, Input, Select} from 'antd';
 import {LightButton} from "../../common/Buttons/CustomButtons";
 
 const layout = {
@@ -19,13 +19,12 @@ const tailLayout = {
     justify: 'end',
 };
 
-const { Option } = Select;
+const {Option} = Select;
 
 export const UserDataForm = () => {
     const onFinish = values => {
         console.log('Success:', values);
     };
-
     const onFinishFailed = errorInfo => {
         console.log('Failed:', errorInfo);
     };
@@ -34,65 +33,33 @@ export const UserDataForm = () => {
         <Form
             {...layout}
             name="userData"
-            initialValues={{
-                remember: true,
-            }}
+            initialValues={{remember: true}}
             onFinish={onFinish}
-            onFinishFailed={onFinishFailed}
-        >
-
-            <Form.Item
-                label="Эл. почта"
-                name="email"
-            >
-                <Input />
+            onFinishFailed={onFinishFailed}>
+            <Form.Item label="Эл. почта" name="email">
+                <Input/>
             </Form.Item>
-
-            <Form.Item
-                label="Telegram"
-                name="telegram"
-            >
-                <Input />
+            <Form.Item label="Telegram" name="telegram">
+                <Input/>
             </Form.Item>
-
-            <Form.Item
-                label="Skype"
-                name="skype"
-            >
-                <Input />
+            <Form.Item label="Skype" name="skype">
+                <Input/>
             </Form.Item>
-
-            <Form.Item
-                label="WhatsApp"
-                name="whatsapp"
-            >
-                <Input />
+            <Form.Item label="WhatsApp" name="whatsapp">
+                <Input/>
             </Form.Item>
-
-            <Form.Item
-                label="Viber"
-                name="viber"
-            >
-                <Input />
+            <Form.Item label="Viber" name="viber">
+                <Input/>
             </Form.Item>
-
-            <Form.Item
-                label="ICQ"
-                name="icq"
-            >
-                <Input />
+            <Form.Item label="ICQ" name="icq">
+                <Input/>
             </Form.Item>
-
-            <Form.Item
-                name="time"
-                label="Час. пояс"
-            >
+            <Form.Item name="time" label="Час. пояс">
                 <Select>
                     <Option value="+8">+8</Option>
                     <Option value="+9">+7</Option>
                 </Select>
             </Form.Item>
-
             <Form.Item style={{marginBottom: 0}} {...tailLayout}>
                 <LightButton htmlType="submit">
                     Сохранить

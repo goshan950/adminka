@@ -1,5 +1,5 @@
 import React from "react";
-import loginImg from "../../../kopeechkaLogo.png";
+import loginImg from "../../../images/kopeechkaLogo.png";
 import {Field} from "redux-form";
 import {required} from "../../../utils/validators/validators";
 import {Input} from "../../common/FormsControls/FormsControls";

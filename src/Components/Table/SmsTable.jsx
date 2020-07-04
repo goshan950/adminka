@@ -185,5 +185,4 @@ class SmsTable extends React.Component {
     }
 }
 
-
 export default SmsTable;
