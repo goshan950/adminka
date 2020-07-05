@@ -32,20 +32,17 @@ const { Option } = Select;
 function onChangeCountry(value) {
     console.log(`selected ${value}`);
 }
-
 function onBlur() {
     console.log('blur');
 }
-
 function onFocus() {
     console.log('focus');
 }
-
 function onSearch(val) {
     console.log('search:', val);
 }
-// select country
 
+// select country
 
 class Header extends Component {
 
@@ -59,6 +56,7 @@ class Header extends Component {
     }
 
     //Modal number
+
     toggleCollapsed = () => {
         this.props.toggleNavCollapsed(!this.props.navCollapsed);
     };
@@ -67,7 +65,9 @@ class Header extends Component {
         return (
             <header className={s.header}>
                 <span onClick={this.toggleCollapsed} className={s.collapseBlock}>
-                    {React.createElement(this.props.navCollapsed ? MenuUnfoldOutlined : MenuFoldOutlined)}
+                    {React.createElement(this.props.navCollapsed
+                        ? MenuUnfoldOutlined
+                        : MenuFoldOutlined)}
                 </span>
                 <img className={s.logo}
                      src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>
@@ -80,8 +80,7 @@ class Header extends Component {
                     cancelText={'Отмена'}
                     visible={this.state.modal1Visible}
                     onOk={() => this.setModal1Visible(false)}
-                    onCancel={() => this.setModal1Visible(false)}
-                >
+                    onCancel={() => this.setModal1Visible(false)}>
                     <Input placeholder={'Введите домен'} style={{marginTop: 20}}/>
                     <Select
                         showSearch
@@ -93,9 +92,7 @@ class Header extends Component {
                         onBlur={onBlur}
                         onSearch={onSearch}
                         filterOption={(input, option) =>
-                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
-                        }
-                    >
+                            option.props.children.toLowerCase().indexOf(input.toLowerCase()) >= 0}>
                         <Option value="russia">Россия</Option>
                         <Option value="usa">США</Option>
                         <Option value="itali">Италия</Option>
@@ -112,9 +109,9 @@ class Header extends Component {
                             </Menu.Item>
                         </Menu>
                     }>
-                            <span className={s.balance}>
-                                100 руб. <DownOutlined/>
-                            </span>
+                        <span className={s.balance}>
+                            100 руб. <DownOutlined/>
+                        </span>
                     </Dropdown>
                 </div>
             </header>

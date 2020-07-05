@@ -50,12 +50,10 @@ class Authorization extends React.Component {
             <div className="App">
                 <div className="login">
                     <div className="container" ref={ref => (this.container = ref)}>
-                        {isLogginActive && (
-                            <LoginReduxForm onSubmit={onSubmit} containerRef={ref => (this.current = ref)} />
-                        )}
-                        {!isLogginActive && (
-                            <RegisterReduxForm containerRef={ref => (this.current = ref)} />
-                        )}
+                        {isLogginActive &&
+                            <LoginReduxForm onSubmit={onSubmit} containerRef={ref => (this.current = ref)} />}
+                        {!isLogginActive &&
+                            <RegisterReduxForm containerRef={ref => (this.current = ref)} />}
                     </div>
                     <RightSide
                         current={current}

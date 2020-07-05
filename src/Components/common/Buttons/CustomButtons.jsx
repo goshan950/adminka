@@ -8,8 +8,7 @@ export const LightButton = (props) => {
                 style={{
                     backgroundColor: "#40a9ff",
                     border: 'none',
-                    ...styles,
-                }}
+                    ...styles}}
                 {...restProps}>
             {children}
         </Button>

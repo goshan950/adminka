@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import s from './ApiGuide.module.css';
 import {Card} from "antd";
 
 const tabList = [

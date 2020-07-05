@@ -9,8 +9,7 @@ export const BaseCard = (props) => {
                   margin: '0 12px 24px 12px',
                   border: 'none',
                   boxShadow: '0 1px 4px rgba(0,21,41,.08)',
-                  ...styles,
-              }}
+                  ...styles}}
               title={title}
               {...restProps}>
             {children}
