@@ -182,7 +182,7 @@ class SmsTable extends React.Component {
                 boxShadow: '0 1px 4px rgba(0,21,41,.08)',
                 margin: '0 12px 24px 12px'
             }}
-                   scroll={{x: 'max-content'}}
+                   scroll={{x: true}}
                    bordered={true}
                    columns={columns} dataSource={data}/>
         )
