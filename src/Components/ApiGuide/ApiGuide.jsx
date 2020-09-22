@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {Card} from "antd";
 
 const tabList = [
@@ -17,31 +17,20 @@ const contentList = {
     tab2: <p>Иформация 2</p>,
 };
 
-class ApiGuide extends Component {
-
-    state = {
-        key: 'tab1',
-    };
-
-    onTabChange = (key, type) => {
-        console.log(key, type);
-        this.setState({ [type]: key });
-    };
-
-    render() {
+const ApiGuide = () => {
+    const [tab, setTab] = useState('tab1');
         return (
                 <Card
                     style={{ margin: '0 12px 24px 12px' }}
                     tabList={tabList}
-                    activeTabKey={this.state.key}
-                    onTabChange={key => {
-                        this.onTabChange(key, 'key');
+                    activeTabKey={tab}
+                    onTabChange={tab => {
+                        setTab(tab);
                     }}
                 >
-                    {contentList[this.state.key]}
+                    {contentList[tab]}
                 </Card>
         );
     }
-}
 
 export default ApiGuide;
