@@ -10,7 +10,7 @@ import Tokens from "./Components/Tokens/Tokens";
 import Authorization from "./Components/Authorization/Authorization";
 import ApiGuide from "./Components/ApiGuide/ApiGuide";
 import Preloader from "./Components/common/Preloader/Preloader";
-import HeaderContainer from "./Components/Header/HeaderContainer";
+import Header from "./Components/Header/Header";
 import {DesktopOrLaptop, Mobile} from "./Components/common/MediaQueries/MediaQueries";
 import Profile from "./Components/Profile/Profile";
 import Number from "./Components/Number/Number";
@@ -20,7 +20,7 @@ const SmsTable = React.lazy(() => import('./Components/Table/SmsTable'));
 
 const App = () => {
     const dispatch = useDispatch();
-    const initialized = useSelector((state) => state.app.initialized,);
+    const initialized = useSelector((state) => state.app.initialized);
     const isAuth = useSelector((state) => state.auth.isAuth);
 
     useEffect( () => {
@@ -40,11 +40,11 @@ const App = () => {
                 <NavBarContainer/>
             </DesktopOrLaptop>
             <Mobile>
-                <HeaderContainer/>
+                <Header/>
             </Mobile>
             <div className='content-wrapper'>
                 <DesktopOrLaptop>
-                    <HeaderContainer/>
+                    <Header/>
                 </DesktopOrLaptop>
                 <Mobile>
                     <NavBarContainer/>
