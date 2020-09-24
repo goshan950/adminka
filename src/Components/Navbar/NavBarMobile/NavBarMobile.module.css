@@ -7,7 +7,7 @@
     height: 50px;
     width: 100%;
 
-    position: sticky;
+    position: fixed;
     bottom: 0;
     z-index: 100;
 }

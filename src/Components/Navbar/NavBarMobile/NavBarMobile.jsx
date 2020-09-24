@@ -9,8 +9,11 @@ import {
 } from '@ant-design/icons';
 import {NavLink} from "react-router-dom";
 import s from './NavBarMobile.module.css';
+import {logout} from "../../../redux/auth-reducer";
+import {useDispatch} from "react-redux";
 
-const NavBarMobile = ({logout}) => {
+const NavBarMobile = () => {
+  const dispatch = useDispatch();
 
   return (
       <div className={s.container}>
@@ -29,7 +32,7 @@ const NavBarMobile = ({logout}) => {
         <NavLink to="/api" className={s.item} activeClassName={s.activeLink}>
           <SolutionOutlined style={{fontSize: '26px'}}/>
         </NavLink>
-        <div className={s.item} onClick={logout}>
+        <div className={s.item} onClick={() => dispatch(logout())}>
           <ImportOutlined style={{fontSize: '26px'}}/>
         </div>
       </div>

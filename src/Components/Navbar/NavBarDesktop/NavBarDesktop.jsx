@@ -13,10 +13,18 @@ import {Menu} from 'antd';
 import {NavLink} from "react-router-dom";
 import s from "./NavBarDesktop.module.css";
 import logoMini from "../../../images/logo_mini.png";
+import {useDispatch, useSelector} from "react-redux";
+import {logout} from "../../../redux/auth-reducer";
+import {toggleNavCollapsed} from "../../../redux/app-reducer";
+import {useLocation} from "react-router";
 
-const NavBarDesktop = (props) => {
+const NavBarDesktop = () => {
+    const dispatch = useDispatch();
+    const location = useLocation();
+    const navCollapsed = useSelector((state) => state.app.navCollapsed);
+
     const handleMediaQueryChange = (matches) => {
-        matches ? props.toggleNavCollapsed(false) : props.toggleNavCollapsed(true)
+        matches ? dispatch(toggleNavCollapsed(false)) : dispatch(toggleNavCollapsed(true))
     }
     const isDesktopOrLaptop = useMediaQuery(
         {minWidth: 1240}, undefined, handleMediaQueryChange
@@ -25,16 +33,16 @@ const NavBarDesktop = (props) => {
     return (
         <div className={s.wrapper}>
             {isDesktopOrLaptop}
-            <div className={props.navCollapsed ? s.collapsed : s.opened}>
+            <div className={navCollapsed ? s.collapsed : s.opened}>
                 <div className={s.logoContainer}>
                     <img src={logoMini} className={s.logoMini} alt="#"/>
-                    {!props.navCollapsed && <img className={s.logo}
+                    {!navCollapsed && <img className={s.logo}
                                                  src='https://kopeechka.store/tpl/panel/img/logo.svg' alt='#'/>}
                 </div>
                 <Menu
-                    selectedKeys={[props.location.pathname]}
+                    selectedKeys={[location.pathname]}
                     mode="inline"
-                    inlineCollapsed={props.navCollapsed}
+                    inlineCollapsed={navCollapsed}
                     style={{marginTop: 24}}>
                     <Menu.Item key="/profile" icon={<UserOutlined style={{fontSize: '20px'}}/>}>
                         <NavLink to="/profile">
@@ -57,7 +65,7 @@ const NavBarDesktop = (props) => {
                         </NavLink>
                     </Menu.Item>
                     <Menu.Item key="5" icon={<ImportOutlined style={{fontSize: '20px'}}/>}
-                               onClick={props.logout}>
+                               onClick={() => dispatch(logout())}>
                         Выход
                     </Menu.Item>
                 </Menu>
